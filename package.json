@@ -1,5 +1,6 @@
 {
   "name": "annui",
+  "author": "liorael",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -22,9 +23,9 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.11.11",
-    "fumadocs-core": "14.2.1",
+    "fumadocs-core": "14.3.1",
     "fumadocs-mdx": "11.1.1",
-    "fumadocs-ui": "14.2.1",
+    "fumadocs-ui": "14.3.1",
     "geist": "^1.3.1",
     "lodash.template": "^4.5.0",
     "lucide-react": "^0.454.0",
