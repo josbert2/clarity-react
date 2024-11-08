@@ -31,10 +31,7 @@ export function ComponentPreview({
   type,
   children,
   className,
-  extractClassname,
-  extractedClassNames,
   align = "center",
-  description,
   hideCode = false,
   ...props
 }: ComponentPreviewProps) {
@@ -60,17 +57,6 @@ export function ComponentPreview({
 
     return <Component />;
   }, [name]);
-
-  const codeString = React.useMemo(() => {
-    if (
-      typeof Code?.props["data-rehype-pretty-code-fragment"] !== "undefined"
-    ) {
-      const [Button] = React.Children.toArray(
-        Code.props.children,
-      ) as React.ReactElement[];
-      return Button?.props?.value || Button?.props?.__rawString__ || null;
-    }
-  }, [Code]);
 
   if (type === "block") {
     return (
