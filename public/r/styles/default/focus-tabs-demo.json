@@ -1,0 +1,13 @@
+{
+  "name": "focus-tabs-demo",
+  "type": "registry:example",
+  "registryDependencies": ["focus-tabs"],
+  "files": [
+    {
+      "path": "example/focus-tabs-demo.tsx",
+      "content": "\"use client\";\n\nimport {\n  Tabs,\n  TabsList,\n  TabsTrigger,\n  TabsTriggerIcon,\n  TabsTriggerText,\n  TabsContent,\n} from \"@/registry/default/annui/focus-tabs\";\nimport { UserIcon, LockIcon, SettingsIcon } from \"lucide-react\";\n\nexport default function FocusTabsDemo() {\n  return (\n    <Tabs defaultValue=\"account\">\n      <TabsList>\n        <TabsTrigger value=\"account\">\n          <TabsTriggerIcon>\n            <UserIcon />\n          </TabsTriggerIcon>\n          <TabsTriggerText>Account</TabsTriggerText>\n        </TabsTrigger>\n        <TabsTrigger value=\"password\">\n          <TabsTriggerIcon>\n            <LockIcon />\n          </TabsTriggerIcon>\n          <TabsTriggerText>Password</TabsTriggerText>\n        </TabsTrigger>\n        <TabsTrigger value=\"settings\">\n          <TabsTriggerIcon>\n            <SettingsIcon />\n          </TabsTriggerIcon>\n          <TabsTriggerText>Settings</TabsTriggerText>\n        </TabsTrigger>\n      </TabsList>\n      <TabsContent value=\"account\">Account</TabsContent>\n      <TabsContent value=\"password\">Password</TabsContent>\n      <TabsContent value=\"settings\">Settings</TabsContent>\n    </Tabs>\n  );\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}
