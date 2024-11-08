@@ -15,7 +15,6 @@ export const lib: Registry = [
   {
     name: "context",
     type: "registry:lib",
-    dependencies: ["react"],
     files: [
       {
         path: "lib/context.ts",
