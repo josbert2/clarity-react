@@ -37,10 +37,10 @@ const CollapsibleTrigger = CollapsiblePrimitive.CollapsibleTrigger
 const CollapsibleContent = ({
   children,
   className,
-  initialHeight,
+  initialHeight = 0,
   ...props
 }: React.ComponentProps<typeof CollapsiblePrimitive.CollapsibleContent> & {
-  initialHeight: number
+  initialHeight?: number
 }) => {
   const [scope, animate] = useAnimate()
   const { open } = useCollapsible()
