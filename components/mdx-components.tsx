@@ -1,21 +1,23 @@
-import { ComponentPreview } from "./component-preview";
-import { Steps, Step } from "fumadocs-ui/components/steps";
-import { ComponentSource } from "./component-source";
+import { Step, Steps } from "fumadocs-ui/components/steps"
 import {
   Tab as FumadocsTab,
   Tabs as FumadocsTabs,
-} from "fumadocs-ui/components/tabs";
+} from "fumadocs-ui/components/tabs"
+
+import {
+  CLIInstall,
+  ComponentInstall,
+  ManualInstall,
+} from "@/components/component-install"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/default/annui/focus-tabs";
-import {
-  ComponentInstall,
-  CLIInstall,
-  ManualInstall,
-} from "@/components/component-install";
+} from "@/registry/default/annui/focus-tabs"
+
+import { ComponentPreview } from "./component-preview"
+import { ComponentSource } from "./component-source"
 
 const components = {
   ComponentSource,
@@ -45,6 +47,6 @@ const components = {
   ComponentInstall,
   CLIInstall,
   ManualInstall,
-};
+}
 
-export { components };
+export { components }

@@ -1,11 +1,12 @@
-"use client";
+"use client"
 
-import { createContext } from "@/registry/default/lib/context";
-import * as CollapsiblePrimitive from "@radix-ui/react-collapsible";
-import { useControllableState } from "@radix-ui/react-use-controllable-state";
-import { useAnimate } from "framer-motion";
-import * as React from "react";
-import { cn } from "@/lib/utils";
+import * as React from "react"
+import * as CollapsiblePrimitive from "@radix-ui/react-collapsible"
+import { useControllableState } from "@radix-ui/react-use-controllable-state"
+import { useAnimate } from "framer-motion"
+
+import { cn } from "@/lib/utils"
+import { createContext } from "@/registry/default/lib/context"
 
 const Collapsible = React.forwardRef<
   React.ElementRef<typeof CollapsiblePrimitive.Root>,
@@ -15,7 +16,7 @@ const Collapsible = React.forwardRef<
     prop: openProp,
     onChange: onOpenChange,
     defaultProp: defaultOpen,
-  });
+  })
 
   return (
     <CollapsibleProvider value={{ open, setOpen }}>
@@ -28,10 +29,10 @@ const Collapsible = React.forwardRef<
         {children}
       </CollapsiblePrimitive.Root>
     </CollapsibleProvider>
-  );
-});
-Collapsible.displayName = CollapsiblePrimitive.Root.displayName;
-const CollapsibleTrigger = CollapsiblePrimitive.CollapsibleTrigger;
+  )
+})
+Collapsible.displayName = CollapsiblePrimitive.Root.displayName
+const CollapsibleTrigger = CollapsiblePrimitive.CollapsibleTrigger
 
 const CollapsibleContent = ({
   children,
@@ -39,10 +40,10 @@ const CollapsibleContent = ({
   initialHeight,
   ...props
 }: React.ComponentProps<typeof CollapsiblePrimitive.CollapsibleContent> & {
-  initialHeight: number;
+  initialHeight: number
 }) => {
-  const [scope, animate] = useAnimate();
-  const { open } = useCollapsible();
+  const [scope, animate] = useAnimate()
+  const { open } = useCollapsible()
 
   React.useEffect(() => {
     if (scope.current) {
@@ -55,9 +56,9 @@ const CollapsibleContent = ({
             duration: 0.3,
           },
         },
-      });
+      })
     }
-  }, [open, animate, initialHeight, scope]);
+  }, [open, animate, initialHeight, scope])
 
   return (
     <CollapsiblePrimitive.CollapsibleContent
@@ -68,19 +69,19 @@ const CollapsibleContent = ({
     >
       {children}
     </CollapsiblePrimitive.CollapsibleContent>
-  );
-};
+  )
+}
 
 interface CollapsibleContextValue {
-  open: boolean | undefined;
-  setOpen: (value: boolean) => void;
+  open: boolean | undefined
+  setOpen: (value: boolean) => void
 }
 
 const [CollapsibleProvider, useCollapsible] =
   createContext<CollapsibleContextValue>({
     open: false,
     setOpen: () => {},
-  });
+  })
 
-export { Collapsible, CollapsibleTrigger, CollapsibleContent };
-export { useCollapsible };
+export { Collapsible, CollapsibleTrigger, CollapsibleContent }
+export { useCollapsible }

@@ -1,6 +1,7 @@
-import { createPreset } from "fumadocs-ui/tailwind-plugin";
-import type { Config } from "tailwindcss";
-import { fontFamily } from "tailwindcss/defaultTheme";
+import { createPreset } from "fumadocs-ui/tailwind-plugin"
+import type { Config } from "tailwindcss"
+import { fontFamily } from "tailwindcss/defaultTheme"
+
 const config: Config = {
   darkMode: ["class"],
   content: [
@@ -68,6 +69,6 @@ const config: Config = {
       },
     },
   },
-};
+}
 
-export default config;
+export default config

@@ -1,11 +1,12 @@
-"use client";
+"use client"
+
+import { PlusIcon } from "lucide-react"
 
 import {
   IconHoverButton,
   IconHoverButtonIcon,
   IconHoverButtonText,
-} from "@/registry/default/annui/icon-hover-button";
-import { PlusIcon } from "lucide-react";
+} from "@/registry/default/annui/icon-hover-button"
 
 export default function IconHoverButtonGhost() {
   return (
@@ -15,5 +16,5 @@ export default function IconHoverButtonGhost() {
       </IconHoverButtonIcon>
       <IconHoverButtonText>Ghost</IconHoverButtonText>
     </IconHoverButton>
-  );
+  )
 }

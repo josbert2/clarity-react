@@ -1,10 +1,11 @@
-import "./global.css";
-import { Metadata } from "next";
+import "./global.css"
 
-import { fontSans, fontMono } from "@/lib/fonts";
-import { RootProvider } from "fumadocs-ui/provider";
-import type { ReactNode } from "react";
-import { cn } from "@/registry/default/lib/utils";
+import type { ReactNode } from "react"
+import { Metadata } from "next"
+import { RootProvider } from "fumadocs-ui/provider"
+
+import { fontMono, fontSans } from "@/lib/fonts"
+import { cn } from "@/registry/default/lib/utils"
 
 export const metadata: Metadata = {
   title: {
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     },
   ],
   creator: "liorael",
-};
+}
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
@@ -39,5 +40,5 @@ export default function Layout({ children }: { children: ReactNode }) {
         <RootProvider>{children}</RootProvider>
       </body>
     </html>
-  );
+  )
 }

@@ -1,14 +1,15 @@
-"use client";
+"use client"
+
+import { LockIcon, SettingsIcon, UserIcon } from "lucide-react"
 
 import {
   Tabs,
+  TabsContent,
   TabsList,
   TabsTrigger,
   TabsTriggerIcon,
   TabsTriggerText,
-  TabsContent,
-} from "@/registry/default/annui/focus-tabs";
-import { UserIcon, LockIcon, SettingsIcon } from "lucide-react";
+} from "@/registry/default/annui/focus-tabs"
 
 export default function FocusTabsDemo() {
   return (
@@ -37,15 +38,15 @@ export default function FocusTabsDemo() {
       <DemoContent value="password">This is the password content.</DemoContent>
       <DemoContent value="settings">This is the settings content.</DemoContent>
     </Tabs>
-  );
+  )
 }
 
 const DemoContent = ({
   value,
   children,
 }: {
-  value: string;
-  children?: React.ReactNode;
+  value: string
+  children?: React.ReactNode
 }) => {
   return (
     <TabsContent
@@ -54,5 +55,5 @@ const DemoContent = ({
     >
       {children}
     </TabsContent>
-  );
-};
+  )
+}

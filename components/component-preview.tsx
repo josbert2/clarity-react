@@ -1,10 +1,11 @@
-"use client";
+"use client"
 
-import * as React from "react";
-import Image from "next/image";
-import { Index } from "@/__registry__";
+import * as React from "react"
+import Image from "next/image"
+import { Index } from "@/__registry__"
+import { CodeIcon, Eye, Loader2 } from "lucide-react"
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 import {
   Tabs,
   TabsContent,
@@ -12,18 +13,17 @@ import {
   TabsTrigger,
   TabsTriggerIcon,
   TabsTriggerText,
-} from "@/registry/default/annui/focus-tabs";
-import { styles } from "@/registry/registry-styles";
-import { CodeIcon, Eye, Loader2 } from "lucide-react";
+} from "@/registry/default/annui/focus-tabs"
+import { styles } from "@/registry/registry-styles"
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
-  name: string;
-  extractClassname?: boolean;
-  extractedClassNames?: string;
-  align?: "center" | "start" | "end";
-  description?: string;
-  hideCode?: boolean;
-  type?: "block" | "component" | "example";
+  name: string
+  extractClassname?: boolean
+  extractedClassNames?: string
+  align?: "center" | "start" | "end"
+  description?: string
+  hideCode?: boolean
+  type?: "block" | "component" | "example"
 }
 
 export function ComponentPreview({
@@ -35,13 +35,13 @@ export function ComponentPreview({
   hideCode = false,
   ...props
 }: ComponentPreviewProps) {
-  const index = styles.findIndex((style) => style.name === "default");
+  const index = styles.findIndex((style) => style.name === "default")
 
-  const Codes = React.Children.toArray(children) as React.ReactElement[];
-  const Code = Codes[index];
+  const Codes = React.Children.toArray(children) as React.ReactElement[]
+  const Code = Codes[index]
 
   const Preview = React.useMemo(() => {
-    const Component = Index["default"][name]?.component;
+    const Component = Index["default"][name]?.component
 
     if (!Component) {
       return (
@@ -52,11 +52,11 @@ export function ComponentPreview({
           </code>{" "}
           not found in registry.
         </p>
-      );
+      )
     }
 
-    return <Component />;
-  }, [name]);
+    return <Component />
+  }, [name])
 
   if (type === "block") {
     return (
@@ -79,7 +79,7 @@ export function ComponentPreview({
           <iframe src={`/blocks/default/${name}`} className="size-full" />
         </div>
       </div>
-    );
+    )
   }
 
   return (
@@ -114,7 +114,7 @@ export function ComponentPreview({
                 "items-center": align === "center",
                 "items-start": align === "start",
                 "items-end": align === "end",
-              },
+              }
             )}
           >
             <React.Suspense
@@ -138,5 +138,5 @@ export function ComponentPreview({
         </TabsContent>
       </Tabs>
     </div>
-  );
+  )
 }

@@ -1,17 +1,17 @@
-"use client";
+"use client"
 
-import * as React from "react";
+import * as React from "react"
+import { AnimatePresence, motion } from "framer-motion"
 
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { motion, AnimatePresence } from "framer-motion";
-import { createContext } from "@/registry/default/lib/context";
+import { cn } from "@/lib/utils"
+import { Button } from "@/components/ui/button"
+import { createContext } from "@/registry/default/lib/context"
 
 const IconHoverButton = React.forwardRef<
   React.ElementRef<typeof Button>,
   React.ComponentPropsWithoutRef<typeof Button>
 >(({ className, children, ...props }, ref) => {
-  const [isHover, setIsHover] = React.useState(false);
+  const [isHover, setIsHover] = React.useState(false)
 
   return (
     <IconHoverButtonProvider value={{ isHover }}>
@@ -25,25 +25,25 @@ const IconHoverButton = React.forwardRef<
         {children}
       </Button>
     </IconHoverButtonProvider>
-  );
-});
-IconHoverButton.displayName = "IconHoverButton";
+  )
+})
+IconHoverButton.displayName = "IconHoverButton"
 
 const IconHoverButtonIcon = React.forwardRef<
   React.ElementRef<"span">,
   React.ComponentPropsWithoutRef<"span">
 >(({ className, ...props }, ref) => (
   <span ref={ref} className={className} {...props} />
-));
-IconHoverButtonIcon.displayName = "IconHoverButtonIcon";
+))
+IconHoverButtonIcon.displayName = "IconHoverButtonIcon"
 
 const IconHoverButtonText = React.forwardRef<
   React.ElementRef<typeof motion.div>,
   React.ComponentPropsWithoutRef<typeof motion.div> & {
-    children?: React.ReactNode;
+    children?: React.ReactNode
   }
 >(({ className, children, ...props }, ref) => {
-  const { isHover } = useIconHoverButtonContext();
+  const { isHover } = useIconHoverButtonContext()
 
   const variants = {
     initial: {
@@ -51,7 +51,7 @@ const IconHoverButtonText = React.forwardRef<
       opacity: 0,
     },
     animate: { width: "auto", opacity: 1 },
-  };
+  }
 
   return (
     <AnimatePresence>
@@ -70,18 +70,18 @@ const IconHoverButtonText = React.forwardRef<
         </motion.div>
       )}
     </AnimatePresence>
-  );
-});
-IconHoverButtonText.displayName = "IconHoverButtonText";
+  )
+})
+IconHoverButtonText.displayName = "IconHoverButtonText"
 
 interface ButtonContextValue {
-  isHover: boolean;
+  isHover: boolean
 }
 
 const [IconHoverButtonProvider, useIconHoverButtonContext] =
   createContext<ButtonContextValue>({
     isHover: false,
-  });
+  })
 
-export { IconHoverButton, IconHoverButtonIcon, IconHoverButtonText };
-export { useIconHoverButtonContext };
+export { IconHoverButton, IconHoverButtonIcon, IconHoverButtonText }
+export { useIconHoverButtonContext }

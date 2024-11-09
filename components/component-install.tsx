@@ -1,12 +1,13 @@
+import { CodeIcon, TerminalIcon } from "lucide-react"
+
 import {
   Tabs,
-  TabsTrigger,
   TabsContent,
   TabsList,
+  TabsTrigger,
   TabsTriggerIcon,
   TabsTriggerText,
-} from "@/registry/default/annui/focus-tabs";
-import { TerminalIcon, CodeIcon } from "lucide-react";
+} from "@/registry/default/annui/focus-tabs"
 
 const ComponentInstall = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -27,15 +28,15 @@ const ComponentInstall = ({ children }: { children: React.ReactNode }) => {
       </TabsList>
       {children}
     </Tabs>
-  );
-};
+  )
+}
 
 const CLIInstall = ({ children }: { children: React.ReactNode }) => {
-  return <TabsContent value="cli">{children}</TabsContent>;
-};
+  return <TabsContent value="cli">{children}</TabsContent>
+}
 
 const ManualInstall = ({ children }: { children: React.ReactNode }) => {
-  return <TabsContent value="manual">{children}</TabsContent>;
-};
+  return <TabsContent value="manual">{children}</TabsContent>
+}
 
-export { ComponentInstall, CLIInstall, ManualInstall };
+export { ComponentInstall, CLIInstall, ManualInstall }

@@ -1,14 +1,15 @@
-"use client";
+"use client"
+
+import { LockIcon, SettingsIcon, UserIcon } from "lucide-react"
 
 import {
   Tabs,
+  TabsContent,
   TabsList,
   TabsTrigger,
   TabsTriggerIcon,
   TabsTriggerText,
-  TabsContent,
-} from "@/registry/default/annui/focus-tabs";
-import { UserIcon, LockIcon, SettingsIcon } from "lucide-react";
+} from "@/registry/default/annui/focus-tabs"
 
 export default function FocusTabsVariant() {
   return (
@@ -43,15 +44,15 @@ export default function FocusTabsVariant() {
         This is the settings content.
       </VariantContent>
     </Tabs>
-  );
+  )
 }
 
 const VariantTrigger = ({
   value,
   children,
 }: {
-  value: string;
-  children?: React.ReactNode;
+  value: string
+  children?: React.ReactNode
 }) => {
   return (
     <TabsTrigger
@@ -60,15 +61,15 @@ const VariantTrigger = ({
     >
       {children}
     </TabsTrigger>
-  );
-};
+  )
+}
 
 const VariantContent = ({
   value,
   children,
 }: {
-  value: string;
-  children?: React.ReactNode;
+  value: string
+  children?: React.ReactNode
 }) => {
   return (
     <TabsContent
@@ -77,5 +78,5 @@ const VariantContent = ({
     >
       {children}
     </TabsContent>
-  );
-};
+  )
+}
