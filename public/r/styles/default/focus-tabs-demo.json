@@ -1,7 +1,9 @@
 {
   "name": "focus-tabs-demo",
   "type": "registry:example",
-  "registryDependencies": ["focus-tabs"],
+  "registryDependencies": [
+    "focus-tabs"
+  ],
   "files": [
     {
       "path": "example/focus-tabs-demo.tsx",

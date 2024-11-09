@@ -62,7 +62,7 @@ const TabsTrigger = React.forwardRef<
       <TabsPrimitive.Trigger
         ref={ref}
         className={cn(
-          "h-full inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-muted text-muted-foreground",
+          "group h-full inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground",
           className,
         )}
         value={value}
@@ -116,7 +116,7 @@ const TabsTriggerText = React.forwardRef<
           animate="animate"
           exit="initial"
           transition={{ duration: 0.3, ease: "easeInOut" }}
-          className="overflow-hidden"
+          className={cn("overflow-hidden", className)}
           {...props}
         >
           <span className="ml-1">{children}</span>
@@ -170,3 +170,5 @@ export {
   TabsTriggerText,
   TabsTriggerIcon,
 };
+
+export { useTabsContext, useTabContext };

@@ -30,6 +30,36 @@ export const Index: Record<string, any> = {
       subcategory: "",
       chunks: [],
     },
+    "icon-hover-button": {
+      name: "icon-hover-button",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [
+        {
+          path: "registry/default/annui/icon-hover-button.tsx",
+          type: "registry:ui",
+          target: "",
+        },
+        {
+          path: "registry/default/ui/button.tsx",
+          type: "registry:ui",
+          target: "",
+        },
+        {
+          path: "registry/default/lib/context.ts",
+          type: "registry:lib",
+          target: "",
+        },
+      ],
+      component: React.lazy(
+        () => import("@/registry/default/annui/icon-hover-button.tsx"),
+      ),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: [],
+    },
     "focus-tabs-demo": {
       name: "focus-tabs-demo",
       description: "",
@@ -44,6 +74,172 @@ export const Index: Record<string, any> = {
       ],
       component: React.lazy(
         () => import("@/registry/default/example/focus-tabs-demo.tsx"),
+      ),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: [],
+    },
+    "focus-tabs-variant": {
+      name: "focus-tabs-variant",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["focus-tabs"],
+      files: [
+        {
+          path: "registry/default/example/focus-tabs-variant.tsx",
+          type: "registry:example",
+          target: "",
+        },
+      ],
+      component: React.lazy(
+        () => import("@/registry/default/example/focus-tabs-variant.tsx"),
+      ),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: [],
+    },
+    "icon-hover-button-demo": {
+      name: "icon-hover-button-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["icon-hover-button"],
+      files: [
+        {
+          path: "registry/default/example/icon-hover-button-demo.tsx",
+          type: "registry:example",
+          target: "",
+        },
+      ],
+      component: React.lazy(
+        () => import("@/registry/default/example/icon-hover-button-demo.tsx"),
+      ),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: [],
+    },
+    "icon-hover-button-primary": {
+      name: "icon-hover-button-primary",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["icon-hover-button"],
+      files: [
+        {
+          path: "registry/default/example/icon-hover-button-primary.tsx",
+          type: "registry:example",
+          target: "",
+        },
+      ],
+      component: React.lazy(
+        () =>
+          import("@/registry/default/example/icon-hover-button-primary.tsx"),
+      ),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: [],
+    },
+    "icon-hover-button-secondary": {
+      name: "icon-hover-button-secondary",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["icon-hover-button"],
+      files: [
+        {
+          path: "registry/default/example/icon-hover-button-secondary.tsx",
+          type: "registry:example",
+          target: "",
+        },
+      ],
+      component: React.lazy(
+        () =>
+          import("@/registry/default/example/icon-hover-button-secondary.tsx"),
+      ),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: [],
+    },
+    "icon-hover-button-destructive": {
+      name: "icon-hover-button-destructive",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["icon-hover-button"],
+      files: [
+        {
+          path: "registry/default/example/icon-hover-button-destructive.tsx",
+          type: "registry:example",
+          target: "",
+        },
+      ],
+      component: React.lazy(
+        () =>
+          import(
+            "@/registry/default/example/icon-hover-button-destructive.tsx"
+          ),
+      ),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: [],
+    },
+    "icon-hover-button-outline": {
+      name: "icon-hover-button-outline",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["icon-hover-button"],
+      files: [
+        {
+          path: "registry/default/example/icon-hover-button-outline.tsx",
+          type: "registry:example",
+          target: "",
+        },
+      ],
+      component: React.lazy(
+        () =>
+          import("@/registry/default/example/icon-hover-button-outline.tsx"),
+      ),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: [],
+    },
+    "icon-hover-button-ghost": {
+      name: "icon-hover-button-ghost",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["icon-hover-button"],
+      files: [
+        {
+          path: "registry/default/example/icon-hover-button-ghost.tsx",
+          type: "registry:example",
+          target: "",
+        },
+      ],
+      component: React.lazy(
+        () => import("@/registry/default/example/icon-hover-button-ghost.tsx"),
+      ),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: [],
+    },
+    "icon-hover-button-link": {
+      name: "icon-hover-button-link",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["icon-hover-button"],
+      files: [
+        {
+          path: "registry/default/example/icon-hover-button-link.tsx",
+          type: "registry:example",
+          target: "",
+        },
+      ],
+      component: React.lazy(
+        () => import("@/registry/default/example/icon-hover-button-link.tsx"),
       ),
       source: "",
       category: "",

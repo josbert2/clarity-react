@@ -20,4 +20,23 @@ export const ui: Registry = [
       },
     ],
   },
+  {
+    name: "icon-hover-button",
+    type: "registry:ui",
+    dependencies: ["framer-motion"],
+    files: [
+      {
+        path: "annui/icon-hover-button.tsx",
+        type: "registry:ui",
+      },
+      {
+        path: "ui/button.tsx",
+        type: "registry:ui",
+      },
+      {
+        path: "lib/context.ts",
+        type: "registry:lib",
+      },
+    ],
+  },
 ];
