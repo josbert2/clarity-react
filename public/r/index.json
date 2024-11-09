@@ -11,10 +11,6 @@
       {
         "path": "annui/focus-tabs.tsx",
         "type": "registry:ui"
-      },
-      {
-        "path": "lib/context.ts",
-        "type": "registry:lib"
       }
     ]
   },
@@ -24,18 +20,13 @@
     "dependencies": [
       "framer-motion"
     ],
+    "registryDependencies": [
+      "button"
+    ],
     "files": [
       {
         "path": "annui/icon-hover-button.tsx",
         "type": "registry:ui"
-      },
-      {
-        "path": "ui/button.tsx",
-        "type": "registry:ui"
-      },
-      {
-        "path": "lib/context.ts",
-        "type": "registry:lib"
       }
     ]
   }

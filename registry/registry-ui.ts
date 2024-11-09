@@ -14,28 +14,17 @@ export const ui: Registry = [
         path: "annui/focus-tabs.tsx",
         type: "registry:ui",
       },
-      {
-        path: "lib/context.ts",
-        type: "registry:lib",
-      },
     ],
   },
   {
     name: "icon-hover-button",
     type: "registry:ui",
     dependencies: ["framer-motion"],
+    registryDependencies: ["button"],
     files: [
       {
         path: "annui/icon-hover-button.tsx",
         type: "registry:ui",
-      },
-      {
-        path: "ui/button.tsx",
-        type: "registry:ui",
-      },
-      {
-        path: "lib/context.ts",
-        type: "registry:lib",
       },
     ],
   },
