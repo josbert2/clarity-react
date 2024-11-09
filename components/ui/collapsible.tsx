@@ -46,7 +46,16 @@ const CollapsibleContent = ({
 
   React.useEffect(() => {
     if (scope.current) {
-      animate(scope.current, { height: open ? "auto" : initialHeight });
+      animate(scope.current, {
+        height: open ? "auto" : initialHeight,
+        transition: {
+          height: {
+            type: "spring",
+            bounce: 0,
+            duration: 0.3,
+          },
+        },
+      });
     }
   }, [open, animate]);
 

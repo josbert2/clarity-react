@@ -62,7 +62,7 @@ const IconHoverButtonText = React.forwardRef<
           initial="initial"
           animate="animate"
           exit="initial"
-          transition={{ duration: 0.3, ease: "easeInOut" }}
+          transition={{ duration: 0.4, type: "spring", bounce: 0 }}
           className={cn("overflow-hidden", className)}
           {...props}
         >
