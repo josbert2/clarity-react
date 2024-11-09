@@ -27,6 +27,7 @@ const IconHoverButton = React.forwardRef<
     </IconHoverButtonProvider>
   );
 });
+IconHoverButton.displayName = "IconHoverButton";
 
 const IconHoverButtonIcon = React.forwardRef<
   React.ElementRef<"span">,
