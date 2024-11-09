@@ -3,12 +3,10 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import type { PageTree } from "fumadocs-core/server"
 import { SearchOnly, TreeContextProvider } from "fumadocs-ui/provider"
-import { Languages } from "lucide-react"
 
 import { getSidebarTabs, type TabOptions } from "../lib/get-sidebar-tabs"
 import { SidebarItems } from "./docs.client"
 import { Sidebar, type SidebarProps } from "./docs/sidebar"
-import { LanguageToggle, LanguageToggleText } from "./layout/language-toggle"
 import { RootToggle, type Option } from "./layout/root-toggle"
 import { LargeSearchToggle } from "./layout/search-toggle"
 import { ThemeToggle } from "./layout/theme-toggle"
@@ -70,14 +68,11 @@ export interface DocsLayoutProps {
 
   containerProps?: HTMLAttributes<HTMLDivElement>
 
-  i18n?: boolean
-
   children?: ReactNode
 }
 
 export function DocsLayout({
   sidebar: { tabs: tabOptions, components: sidebarComponents, ...sidebar } = {},
-  i18n = false,
   ...props
 }: DocsLayoutProps): ReactNode {
   // const Aside = collapsible ? CollapsibleSidebar : Sidebar
@@ -107,7 +102,7 @@ export function DocsLayout({
           </SidebarGroup>
         </SidebarContent>
         <SidebarFooter>
-          <SidebarFooterItems i18n={i18n} />
+          <SidebarFooterItems />
         </SidebarFooter>
       </Sidebar>
       <SidebarInset>
@@ -136,20 +131,14 @@ export function DocsLayout({
   )
 }
 
-function SidebarFooterItems({ i18n }: { i18n: boolean }) {
+function SidebarFooterItems() {
   return (
     <SidebarGroup>
       <SidebarGroupContent>
         <SidebarMenu className="flex flex-row items-center">
-          {i18n ? (
-            <LanguageToggle className="me-1.5">
-              <Languages className="size-5" />
-              <LanguageToggleText className="md:hidden" />
-            </LanguageToggle>
-          ) : null}
           <ThemeToggle className="p-0 md:order-first" />
           <Link
-            className="ml-auto [&_svg]:size-5 hover:bg-secondary hover:text-secondary-foreground rounded-md p-1.5"
+            className="ml-auto [&_svg]:size-5 [&_svg]:fill-current hover:bg-secondary hover:text-secondary-foreground rounded-md p-1.5"
             href="https://github.com/annui-org/annui"
             target="_blank"
           >
