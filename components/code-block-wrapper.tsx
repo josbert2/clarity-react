@@ -33,7 +33,7 @@ export function CodeBlockWrapper({
           <div
             className={cn(
               "[&_figure]:my-0 [&_pre]:max-h-[650px] [&_pre]:pb-[100px]",
-              !isOpened ? "[&_pre]:overflow-hidden" : "[&_pre]:overflow-auto]"
+              !isOpened ? "[&_pre]:overflow-hidden" : "[&_pre]:overflow-auto]",
             )}
           >
             {children}
@@ -42,7 +42,7 @@ export function CodeBlockWrapper({
         <div
           className={cn(
             "absolute flex items-center justify-center bg-gradient-to-b from-background/10 to-background/50 p-2",
-            isOpened ? "inset-x-0 bottom-0 h-12" : "inset-0"
+            isOpened ? "inset-x-0 bottom-0 h-12" : "inset-0",
           )}
         >
           <CollapsibleTrigger asChild>

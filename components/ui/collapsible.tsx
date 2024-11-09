@@ -57,7 +57,7 @@ const CollapsibleContent = ({
         },
       });
     }
-  }, [open, animate]);
+  }, [open, animate, initialHeight, scope]);
 
   return (
     <CollapsiblePrimitive.CollapsibleContent
