@@ -114,7 +114,7 @@ export function ComponentPreview({
                 "items-center": align === "center",
                 "items-start": align === "start",
                 "items-end": align === "end",
-              },
+              }
             )}
           >
             <React.Suspense
