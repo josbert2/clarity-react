@@ -284,7 +284,7 @@ export function SidebarFolderLink(props: LinkProps) {
       data-active={active}
       className={cn(
         itemVariants({ active }),
-        "w-full pe-3.5 md:pe-1.5",
+        "w-full pe-3.5 md:pe-1.5 h-8",
         props.className
       )}
       onClick={(e) => {

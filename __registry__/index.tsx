@@ -37,6 +37,22 @@ export const Index: Record<string, any> = {
       subcategory: "",
       chunks: []
     },
+    "adaptive-container": {
+      name: "adaptive-container",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/annui/adaptive-container.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/annui/adaptive-container.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
     "focus-tabs-demo": {
       name: "focus-tabs-demo",
       description: "",
@@ -176,6 +192,22 @@ export const Index: Record<string, any> = {
         target: ""
       }],
       component: React.lazy(() => import("@/registry/default/example/icon-hover-button-link.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "adaptive-container-demo": {
+      name: "adaptive-container-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["adaptive-container","button"],
+      files: [{
+        path: "registry/default/example/adaptive-container-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/example/adaptive-container-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",

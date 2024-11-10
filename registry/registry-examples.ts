@@ -100,4 +100,15 @@ export const examples: Registry = [
       },
     ],
   },
+  {
+    name: "adaptive-container-demo",
+    type: "registry:example",
+    registryDependencies: ["adaptive-container", "button"],
+    files: [
+      {
+        path: "example/adaptive-container-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
 ]

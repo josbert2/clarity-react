@@ -5,6 +5,7 @@ import { Metadata } from "next"
 import { RootProvider } from "fumadocs-ui/provider"
 
 import { fontMono, fontSans } from "@/lib/fonts"
+import { Toaster } from "@/components/ui/sonner"
 import { cn } from "@/registry/default/lib/utils"
 
 export const metadata: Metadata = {
@@ -38,6 +39,7 @@ export default function Layout({ children }: { children: ReactNode }) {
     >
       <body className="flex flex-col min-h-screen font-sans antialiased">
         <RootProvider>{children}</RootProvider>
+        <Toaster />
       </body>
     </html>
   )

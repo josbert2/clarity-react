@@ -28,4 +28,15 @@ export const ui: Registry = [
       },
     ],
   },
+  {
+    name: "adaptive-container",
+    type: "registry:ui",
+    dependencies: ["react-use-measure", "framer-motion"],
+    files: [
+      {
+        path: "annui/adaptive-container.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
 ]
