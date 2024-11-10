@@ -50,14 +50,8 @@ const TabsTrigger = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>
 >(({ className, children, value, ...props }, ref) => {
-  const [isFirstRender, setIsFirstRender] = React.useState(true)
-
-  React.useEffect(() => {
-    setIsFirstRender(false)
-  }, [])
-
   return (
-    <TabProvider value={{ value, isFirstRender }}>
+    <TabProvider value={{ value }}>
       <TabsPrimitive.Trigger
         ref={ref}
         className={cn(
@@ -93,20 +87,20 @@ const TabsTriggerText = React.forwardRef<
   }
 >(({ className, children, ...props }, ref) => {
   const { activeTab } = useTabsContext()
-  const { value, isFirstRender } = useTabContext()
+  const { value } = useTabContext()
 
   const isActive = value === activeTab
 
   const variants = {
     initial: {
-      width: isFirstRender && isActive ? "auto" : 0,
-      opacity: isFirstRender && isActive ? 1 : 0,
+      width: 0,
+      opacity: 0,
     },
     animate: { width: "auto", opacity: 1 },
   }
 
   return (
-    <AnimatePresence>
+    <AnimatePresence initial={false}>
       {isActive && (
         <motion.div
           ref={ref}
@@ -148,7 +142,6 @@ interface TabsContextValue {
 
 interface TabContextValue {
   value: string | undefined
-  isFirstRender: boolean
 }
 
 const [TabsProvider, useTabsContext] = createContext<TabsContextValue>({
@@ -158,7 +151,6 @@ const [TabsProvider, useTabsContext] = createContext<TabsContextValue>({
 
 const [TabProvider, useTabContext] = createContext<TabContextValue>({
   value: undefined,
-  isFirstRender: true,
 })
 
 export {
