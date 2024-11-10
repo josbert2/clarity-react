@@ -69,6 +69,22 @@ export const Index: Record<string, any> = {
       subcategory: "",
       chunks: []
     },
+    "vercel-tabs": {
+      name: "vercel-tabs",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/annui/vercel-tabs.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/annui/vercel-tabs.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
     "focus-tabs-demo": {
       name: "focus-tabs-demo",
       description: "",
@@ -256,6 +272,22 @@ export const Index: Record<string, any> = {
         target: ""
       }],
       component: React.lazy(() => import("@/registry/default/example/dropdown-menu-00-variant.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "vercel-tabs-demo": {
+      name: "vercel-tabs-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["vercel-tabs"],
+      files: [{
+        path: "registry/default/example/vercel-tabs-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/example/vercel-tabs-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",

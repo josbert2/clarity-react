@@ -50,4 +50,19 @@ export const ui: Registry = [
       },
     ],
   },
+  {
+    name: "vercel-tabs",
+    type: "registry:ui",
+    dependencies: [
+      "@radix-ui/react-tabs",
+      "@radix-ui/react-use-controllable-state",
+      "framer-motion",
+    ],
+    files: [
+      {
+        path: "annui/vercel-tabs.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
 ]
