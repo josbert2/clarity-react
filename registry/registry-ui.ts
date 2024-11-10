@@ -39,4 +39,15 @@ export const ui: Registry = [
       },
     ],
   },
+  {
+    name: "dropdown-menu-00",
+    type: "registry:ui",
+    registryDependencies: ["dropdown-menu", "lucide-react"],
+    files: [
+      {
+        path: "annui/dropdown-menu-00.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
 ]

@@ -111,4 +111,26 @@ export const examples: Registry = [
       },
     ],
   },
+  {
+    name: "dropdown-menu-00-demo",
+    type: "registry:example",
+    registryDependencies: ["dropdown-menu-00", "button"],
+    files: [
+      {
+        path: "example/dropdown-menu-00-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "dropdown-menu-00-variant",
+    type: "registry:example",
+    registryDependencies: ["dropdown-menu-00", "button"],
+    files: [
+      {
+        path: "example/dropdown-menu-00-variant.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
 ]

@@ -53,6 +53,22 @@ export const Index: Record<string, any> = {
       subcategory: "",
       chunks: []
     },
+    "dropdown-menu-00": {
+      name: "dropdown-menu-00",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: ["dropdown-menu","lucide-react"],
+      files: [{
+        path: "registry/default/annui/dropdown-menu-00.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/annui/dropdown-menu-00.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
     "focus-tabs-demo": {
       name: "focus-tabs-demo",
       description: "",
@@ -208,6 +224,38 @@ export const Index: Record<string, any> = {
         target: ""
       }],
       component: React.lazy(() => import("@/registry/default/example/adaptive-container-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "dropdown-menu-00-demo": {
+      name: "dropdown-menu-00-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["dropdown-menu-00","button"],
+      files: [{
+        path: "registry/default/example/dropdown-menu-00-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/example/dropdown-menu-00-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "dropdown-menu-00-variant": {
+      name: "dropdown-menu-00-variant",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["dropdown-menu-00","button"],
+      files: [{
+        path: "registry/default/example/dropdown-menu-00-variant.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/example/dropdown-menu-00-variant.tsx")),
       source: "",
       category: "",
       subcategory: "",
