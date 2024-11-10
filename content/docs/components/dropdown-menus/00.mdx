@@ -41,6 +41,38 @@ Update the import paths to match your project setup
 
 </ComponentInstall>
 
+## Usage
+
+```tsx
+import { Home } from "lucide-react"
+
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuItemDescription,
+  DropdownMenuItemIcon,
+  DropdownMenuItemTitle,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/registry/default/annui/dropdown-menu-00"
+```
+
+```tsx
+<DropdownMenu>
+  <DropdownMenuTrigger>Open</DropdownMenuTrigger>
+  <DropdownMenuContent>
+    <DropdownMenuItem>
+      <DropdownMenuItemIcon>
+        <Home />
+      </DropdownMenuItemIcon>
+      <DropdownMenuItemTitle>Home</DropdownMenuItemTitle>
+      <DropdownMenuItemDescription>Home page</DropdownMenuItemDescription>
+    </DropdownMenuItem>
+  </DropdownMenuContent>
+</DropdownMenu>
+```
+
 ## Examples
 
 ### Variant
