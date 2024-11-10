@@ -1,26 +1,13 @@
-# annui
+# AnnUI
 
-This is a Next.js application generated with
-[Create Fumadocs](https://github.com/fuma-nama/fumadocs).
+AnnUI is a collection of re-usable components that you can copy and paste into your web apps.
 
-Run development server:
+## Philosophy
 
-```bash
-npm run dev
-# or
-pnpm dev
-# or
-yarn dev
-```
+**High Customizability**: AnnUI inherits the design philosophy of shadcn/ui while retaining Radix UI's powerful declarative component design. This ensures our components maintain high customizability while providing an excellent development experience.
 
-Open http://localhost:3000 with your browser to see the result.
+**Developer Experience**: Through declarative component APIs, developers can build interfaces more intuitively, reduce boilerplate code, and improve development efficiency. Additionally, based on Radix UI's accessibility support, our components are inherently accessible.
 
-## Learn More
+**Enhanced Animations**: We've enhanced many components with animations to improve user experience and create more engaging, dynamic interfaces. These thoughtfully designed animations help provide visual feedback and make interactions more intuitive and delightful.
 
-To learn more about Next.js and Fumadocs, take a look at the following
-resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
-  features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [Fumadocs](https://fumadocs.vercel.app) - learn about Fumadocs
+AnnUI is heavily inspired by [shadcn/ui](https://ui.shadcn.com/) and [magicui](https://magicui.dev/).
