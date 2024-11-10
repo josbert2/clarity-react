@@ -41,8 +41,9 @@ const IconHoverButtonText = React.forwardRef<
   React.ElementRef<typeof motion.div>,
   React.ComponentPropsWithoutRef<typeof motion.div> & {
     children?: React.ReactNode
+    spanClassName?: string
   }
->(({ className, children, ...props }, ref) => {
+>(({ className, spanClassName, children, ...props }, ref) => {
   const { isHover } = useIconHoverButtonContext()
 
   const variants = {
@@ -66,7 +67,7 @@ const IconHoverButtonText = React.forwardRef<
           className={cn("overflow-hidden", className)}
           {...props}
         >
-          <span className="ml-1">{children}</span>
+          <span className={cn("ml-1", spanClassName)}>{children}</span>
         </motion.div>
       )}
     </AnimatePresence>

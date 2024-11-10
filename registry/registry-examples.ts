@@ -101,6 +101,17 @@ export const examples: Registry = [
     ],
   },
   {
+    name: "icon-hover-button-both-side",
+    type: "registry:example",
+    registryDependencies: ["icon-hover-button"],
+    files: [
+      {
+        path: "example/icon-hover-button-both-side.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
     name: "adaptive-container-demo",
     type: "registry:example",
     registryDependencies: ["adaptive-container", "button"],

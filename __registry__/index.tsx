@@ -229,6 +229,22 @@ export const Index: Record<string, any> = {
       subcategory: "",
       chunks: []
     },
+    "icon-hover-button-both-side": {
+      name: "icon-hover-button-both-side",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["icon-hover-button"],
+      files: [{
+        path: "registry/default/example/icon-hover-button-both-side.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/example/icon-hover-button-both-side.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
     "adaptive-container-demo": {
       name: "adaptive-container-demo",
       description: "",
