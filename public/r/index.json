@@ -48,8 +48,7 @@
     "name": "dropdown-menu-00",
     "type": "registry:ui",
     "registryDependencies": [
-      "dropdown-menu",
-      "lucide-react"
+      "dropdown-menu"
     ],
     "files": [
       {
