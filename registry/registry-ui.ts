@@ -80,4 +80,19 @@ export const ui: Registry = [
       },
     ],
   },
+  {
+    name: "tabs-00",
+    type: "registry:ui",
+    dependencies: [
+      "motion",
+      "@radix-ui/react-tabs",
+      "@radix-ui/react-use-controllable-state",
+    ],
+    files: [
+      {
+        path: "annui/tabs-00.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
 ]

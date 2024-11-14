@@ -101,6 +101,22 @@ export const Index: Record<string, any> = {
       subcategory: "",
       chunks: []
     },
+    "tabs-00": {
+      name: "tabs-00",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/annui/tabs-00.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/annui/tabs-00.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
     "focus-tabs-demo": {
       name: "focus-tabs-demo",
       description: "",
@@ -336,6 +352,22 @@ export const Index: Record<string, any> = {
         target: ""
       }],
       component: React.lazy(() => import("@/registry/default/example/select-filter-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "tabs-00-demo": {
+      name: "tabs-00-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["tabs-00"],
+      files: [{
+        path: "registry/default/example/tabs-00-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/example/tabs-00-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
