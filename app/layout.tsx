@@ -13,7 +13,8 @@ export const metadata: Metadata = {
     default: "AnnUI",
     template: "%s | AnnUI",
   },
-  description: "AnnUI is a UI library like ShadcnUI",
+  description:
+    "AnnUI is a collection of re-usable components that you can copy and paste into your web apps.",
   keywords: [
     "Next.js",
     "React",
