@@ -123,7 +123,7 @@ const Item = ({
 const Footer = () => {
   return (
     <motion.footer
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, translateY: 5 }}
       whileInView={{
         opacity: 1,
         y: 0,
@@ -134,7 +134,7 @@ const Footer = () => {
       <motion.div
         className="container flex items-center justify-between h-16 px-4"
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        whileInView={{ opacity: 1 }}
         transition={{ delay: 0.2 }}
       >
         <div className="flex items-center gap-4">
