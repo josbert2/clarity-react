@@ -155,4 +155,15 @@ export const examples: Registry = [
       },
     ],
   },
+  {
+    name: "select-filter-demo",
+    type: "registry:example",
+    registryDependencies: ["select-filter"],
+    files: [
+      {
+        path: "example/select-filter-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
 ]

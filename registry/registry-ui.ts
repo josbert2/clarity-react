@@ -65,4 +65,19 @@ export const ui: Registry = [
       },
     ],
   },
+  {
+    name: "select-filter",
+    type: "registry:ui",
+    dependencies: [
+      "@radix-ui/react-use-controllable-state",
+      "motion",
+      "colord",
+    ],
+    files: [
+      {
+        path: "annui/select-filter.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
 ]
