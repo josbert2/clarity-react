@@ -5,7 +5,7 @@
     "dependencies": [
       "@radix-ui/react-tabs",
       "@radix-ui/react-use-controllable-state",
-      "framer-motion"
+      "motion"
     ],
     "files": [
       {
@@ -18,7 +18,7 @@
     "name": "icon-hover-button",
     "type": "registry:ui",
     "dependencies": [
-      "framer-motion"
+      "motion"
     ],
     "registryDependencies": [
       "button"
@@ -35,7 +35,7 @@
     "type": "registry:ui",
     "dependencies": [
       "react-use-measure",
-      "framer-motion"
+      "motion"
     ],
     "files": [
       {
@@ -47,8 +47,8 @@
   {
     "name": "dropdown-menu-00",
     "type": "registry:ui",
-    "registryDependencies": [
-      "dropdown-menu"
+    "dependencies": [
+      "@radix-ui/react-dropdown-menu"
     ],
     "files": [
       {
@@ -63,7 +63,7 @@
     "dependencies": [
       "@radix-ui/react-tabs",
       "@radix-ui/react-use-controllable-state",
-      "framer-motion"
+      "motion"
     ],
     "files": [
       {

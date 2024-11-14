@@ -57,7 +57,7 @@ export const Index: Record<string, any> = {
       name: "dropdown-menu-00",
       description: "",
       type: "registry:ui",
-      registryDependencies: ["dropdown-menu"],
+      registryDependencies: undefined,
       files: [{
         path: "registry/default/annui/dropdown-menu-00.tsx",
         type: "registry:ui",
