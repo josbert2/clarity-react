@@ -66,13 +66,13 @@ interface InternalContext {
 }
 
 const itemVariants = cva(
-  "flex flex-row items-center gap-2 rounded-md px-3 py-2 text-fd-muted-foreground transition-colors duration-100 [overflow-wrap:anywhere] md:px-2 md:py-1.5 [&_svg]:size-4",
+  "flex flex-row items-center gap-2.5 rounded-md px-3 py-2 text-fd-muted-foreground transition-colors duration-100 [overflow-wrap:anywhere] md:px-2.5 md:py-2 [&_svg]:size-4",
   {
     variants: {
       active: {
-        true: "bg-fd-primary/10 font-medium text-fd-primary",
+        true: "bg-fd-primary/10 font-medium text-fd-primary shadow-sm",
         false:
-          "hover:bg-fd-accent/50 hover:text-fd-accent-foreground/80 hover:transition-none",
+          "hover:bg-fd-accent/40 hover:text-fd-accent-foreground/90 hover:shadow-sm hover:transition-none",
       },
     },
   }
@@ -201,11 +201,15 @@ export function SidebarItem({
         <Link
           {...props}
           data-active={active}
-          className={cn(itemVariants({ active }))}
+          className={cn(
+            itemVariants({ active }),
+            "group/item transition-all duration-200"
+          )}
           prefetch={prefetch}
         >
-          {icon ?? (props.external ? <ExternalLink /> : null)}
-          {props.children}
+          {icon ??
+            (props.external ? <ExternalLink className="shrink-0" /> : null)}
+          <span className="flex-1 truncate">{props.children}</span>
         </Link>
       </SidebarMenuButton>
     </SidebarMenuItem>
@@ -250,14 +254,14 @@ export function SidebarFolderTrigger(props: CollapsibleTriggerProps) {
       <CollapsibleTrigger
         className={cn(
           itemVariants({ active: false }),
-          "w-full pe-3.5 md:pe-1.5"
+          "w-full pe-3 md:pe-2 group/trigger"
         )}
         asChild
         {...props}
       >
         <SidebarMenuButton>
           {props.children}
-          <ChevronRight className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-90" />
+          <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
         </SidebarMenuButton>
       </CollapsibleTrigger>
     </SidebarMenuItem>
@@ -308,7 +312,9 @@ export function SidebarFolderLink(props: LinkProps) {
 export function SidebarFolderContent(props: CollapsibleContentProps) {
   return (
     <CollapsibleContent forceMount {...props}>
-      <SidebarMenuSub>{props.children}</SidebarMenuSub>
+      <SidebarMenuSub className="ml-3 border-l-[1.5px] border-fd-border/50 pl-3">
+        {props.children}
+      </SidebarMenuSub>
     </CollapsibleContent>
   )
 }
