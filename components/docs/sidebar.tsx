@@ -318,7 +318,7 @@ export function SidebarFolderLink(props: LinkProps) {
 export function SidebarFolderContent(props: CollapsibleContentProps) {
   return (
     <CollapsibleContent forceMount {...props}>
-      <SidebarMenuSub className="ml-3 border-l-[1.5px] border-fd-border/50 pl-3 pr-1.5 [&>li>a]:rounded-r-md [&>li>button]:rounded-r-md">
+      <SidebarMenuSub className="ml-3 border-l-[1.5px] border-fd-border/50 pl-1.5 pr-1.5">
         {props.children}
       </SidebarMenuSub>
     </CollapsibleContent>
