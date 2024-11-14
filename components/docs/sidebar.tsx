@@ -66,13 +66,12 @@ interface InternalContext {
 }
 
 const itemVariants = cva(
-  "flex flex-row items-center gap-2.5 rounded-md px-3 py-2 text-fd-muted-foreground transition-colors duration-100 [overflow-wrap:anywhere] md:px-2.5 md:py-2 [&_svg]:size-4",
+  "flex flex-row items-center gap-2.5 rounded-md px-3 py-2 text-fd-muted-foreground/90 transition-all duration-200 [overflow-wrap:anywhere] md:px-2.5 md:py-2 [&_svg]:size-4 hover:translate-x-0.5",
   {
     variants: {
       active: {
-        true: "bg-fd-primary/10 font-medium text-fd-primary shadow-sm",
-        false:
-          "hover:bg-fd-accent/40 hover:text-fd-accent-foreground/90 hover:shadow-sm hover:transition-none",
+        true: "bg-fd-primary font-medium text-fd-primary translate-x-0.5",
+        false: "hover:bg-fd-accent hover:text-fd-accent-foreground",
       },
     },
   }
@@ -181,7 +180,14 @@ export function SidebarViewport(props: ScrollAreaProps) {
 }
 
 export function SidebarSeparator(props: HTMLAttributes<HTMLParagraphElement>) {
-  return <SidebarGroupLabel {...props}>{props.children}</SidebarGroupLabel>
+  return (
+    <SidebarGroupLabel
+      {...props}
+      className="text-[11px] uppercase tracking-wider text-fd-muted-foreground/60 font-semibold pt-4 pb-2"
+    >
+      {props.children}
+    </SidebarGroupLabel>
+  )
 }
 
 export function SidebarItem({
@@ -312,7 +318,7 @@ export function SidebarFolderLink(props: LinkProps) {
 export function SidebarFolderContent(props: CollapsibleContentProps) {
   return (
     <CollapsibleContent forceMount {...props}>
-      <SidebarMenuSub className="ml-3 border-l-[1.5px] border-fd-border/50 pl-3">
+      <SidebarMenuSub className="ml-3 border-l-[1.5px] border-fd-border/50 pl-3 pr-1.5 [&>li>a]:rounded-r-md [&>li>button]:rounded-r-md">
         {props.children}
       </SidebarMenuSub>
     </CollapsibleContent>

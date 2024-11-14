@@ -434,7 +434,8 @@ const SidebarGroup = React.forwardRef<
       ref={ref}
       data-sidebar="group"
       className={cn(
-        "relative flex w-full min-w-0 flex-col gap-1 p-2.5",
+        "relative flex w-full min-w-0 flex-col gap-1.5 px-2 py-1.5",
+        "first:pt-2 last:pb-2",
         className
       )}
       {...props}
@@ -507,7 +508,7 @@ const SidebarMenu = React.forwardRef<
   <ul
     ref={ref}
     data-sidebar="menu"
-    className={cn("flex w-full min-w-0 flex-col gap-1", className)}
+    className={cn("flex w-full min-w-0 flex-col gap-[5px]", className)}
     {...props}
   />
 ))
@@ -705,7 +706,9 @@ const SidebarMenuSub = React.forwardRef<
     ref={ref}
     data-sidebar="menu-sub"
     className={cn(
-      "flex min-w-0 flex-col gap-1.5 py-1",
+      "flex min-w-0 flex-col gap-[5px] py-1.5",
+      "animate-in slide-in-from-left-1 duration-200",
+      "[&>li>a]:rounded-md [&>li>button]:rounded-md",
       "group-data-[collapsible=icon]:hidden",
       className
     )}
@@ -737,11 +740,12 @@ const SidebarMenuSubButton = React.forwardRef<
       data-size={size}
       data-active={isActive}
       className={cn(
-        "flex h-7 min-w-0 -translate-x-px items-center gap-2 overflow-hidden rounded-md px-2 text-sidebar-foreground outline-none ring-sidebar-ring hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 [&>svg]:text-sidebar-accent-foreground",
+        "flex h-7 min-w-0 items-center gap-2 overflow-hidden rounded-md px-2 text-sidebar-foreground outline-none ring-sidebar-ring hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 [&>svg]:text-sidebar-accent-foreground",
         "data-[active=true]:bg-sidebar-accent data-[active=true]:text-sidebar-accent-foreground",
         size === "sm" && "text-xs",
         size === "md" && "text-sm",
         "group-data-[collapsible=icon]:hidden",
+        "!rounded-md",
         className
       )}
       {...props}
