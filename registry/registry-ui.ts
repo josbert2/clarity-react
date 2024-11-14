@@ -7,7 +7,7 @@ export const ui: Registry = [
     dependencies: [
       "@radix-ui/react-tabs",
       "@radix-ui/react-use-controllable-state",
-      "framer-motion",
+      "motion",
     ],
     files: [
       {
@@ -19,7 +19,7 @@ export const ui: Registry = [
   {
     name: "icon-hover-button",
     type: "registry:ui",
-    dependencies: ["framer-motion"],
+    dependencies: ["motion"],
     registryDependencies: ["button"],
     files: [
       {
@@ -31,7 +31,7 @@ export const ui: Registry = [
   {
     name: "adaptive-container",
     type: "registry:ui",
-    dependencies: ["react-use-measure", "framer-motion"],
+    dependencies: ["react-use-measure", "motion"],
     files: [
       {
         path: "annui/adaptive-container.tsx",
@@ -56,7 +56,7 @@ export const ui: Registry = [
     dependencies: [
       "@radix-ui/react-tabs",
       "@radix-ui/react-use-controllable-state",
-      "framer-motion",
+      "motion",
     ],
     files: [
       {

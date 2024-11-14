@@ -3,7 +3,7 @@
 import * as React from "react"
 import * as CollapsiblePrimitive from "@radix-ui/react-collapsible"
 import { useControllableState } from "@radix-ui/react-use-controllable-state"
-import { useAnimate } from "framer-motion"
+import { useAnimate } from "motion/react"
 
 import { cn } from "@/lib/utils"
 import { createContext } from "@/registry/default/lib/context"

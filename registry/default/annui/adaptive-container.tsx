@@ -7,7 +7,7 @@ import {
   motion,
   TargetAndTransition,
   Transition,
-} from "framer-motion"
+} from "motion/react"
 import useMeasure from "react-use-measure"
 
 const AdaptiveContainer = ({
