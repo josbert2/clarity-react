@@ -42,7 +42,7 @@ export const ui: Registry = [
   {
     name: "dropdown-menu-00",
     type: "registry:ui",
-    registryDependencies: ["dropdown-menu"],
+    dependencies: ["@radix-ui/react-dropdown-menu"],
     files: [
       {
         path: "annui/dropdown-menu-00.tsx",
