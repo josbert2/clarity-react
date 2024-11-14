@@ -1,5 +1,7 @@
 import type { ReactNode } from "react"
 
+import { Footer, Header } from "./layout.client"
+
 export default function Layout({
   children,
 }: {
@@ -7,9 +9,9 @@ export default function Layout({
 }): React.ReactElement {
   return (
     <>
-      <header></header>
+      <Header />
       <main>{children}</main>
-      <footer></footer>
+      <Footer />
     </>
   )
 }

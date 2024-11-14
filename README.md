@@ -1,6 +1,6 @@
 # AnnUI
 
-AnnUI is a highly customizable React component library focused on providing modern, elegant, and easy-to-use UI components.
+AnnUI is a collection of re-usable components that you can copy and paste into your web apps.
 
 ## ✨ Features
 
