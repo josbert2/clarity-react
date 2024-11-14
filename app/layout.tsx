@@ -10,7 +10,7 @@ import { cn } from "@/registry/default/lib/utils"
 
 export const metadata: Metadata = {
   title: {
-    default: "AnnUI",
+    default: "AnnUI - Modern React Component Library",
     template: "%s | AnnUI",
   },
   description:
@@ -18,9 +18,16 @@ export const metadata: Metadata = {
   keywords: [
     "Next.js",
     "React",
+    "Component Library",
+    "UI Library",
     "Tailwind CSS",
     "Server Components",
     "Radix UI",
+    "TypeScript",
+    "Frontend Development",
+    "Web Development",
+    "UI Components",
+    "Design System",
   ],
   authors: [
     {
@@ -29,6 +36,23 @@ export const metadata: Metadata = {
     },
   ],
   creator: "liorael",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://annui.org",
+    title: "AnnUI - Modern React Component Library",
+    description:
+      "AnnUI is a collection of re-usable components that you can copy and paste into your web apps.",
+    siteName: "AnnUI",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AnnUI - Modern React Component Library",
+    description:
+      "AnnUI is a collection of re-usable components that you can copy and paste into your web apps.",
+    creator: "@liorael",
+  },
+  metadataBase: new URL("https://annui.org"),
 }
 
 export default function Layout({ children }: { children: ReactNode }) {

@@ -1,13 +1,42 @@
 # AnnUI
 
-AnnUI is a collection of re-usable components that you can copy and paste into your web apps.
+AnnUI is a highly customizable React component library focused on providing modern, elegant, and easy-to-use UI components.
 
-## Philosophy
+## ✨ Features
 
-**High Customizability**: AnnUI inherits the design philosophy of shadcn/ui while retaining Radix UI's powerful declarative component design. This ensures our components maintain high customizability while providing an excellent development experience.
+- 🎨 **Highly Customizable** - Inherits shadcn/ui's design philosophy while retaining Radix UI's powerful declarative component design
+- 🚀 **Great DX** - Declarative API design, reduced boilerplate code, improved development efficiency
+- ♿ **Accessibility** - Built on Radix UI's accessibility support
+- 🎭 **Beautiful Animations** - Thoughtfully designed animations providing intuitive visual feedback
+- 📦 **Easy to Use** - Quick component installation via shadcn CLI
+- 🎯 **TypeScript Support** - Complete TypeScript type definitions
 
-**Developer Experience**: Through declarative component APIs, developers can build interfaces more intuitively, reduce boilerplate code, and improve development efficiency. Additionally, based on Radix UI's accessibility support, our components are inherently accessible.
+## 🚀 Quick Start
 
-**Enhanced Animations**: We've enhanced many components with animations to improve user experience and create more engaging, dynamic interfaces. These thoughtfully designed animations help provide visual feedback and make interactions more intuitive and delightful.
+Install components quickly using the CLI tool:
 
-AnnUI is heavily inspired by [shadcn/ui](https://ui.shadcn.com/) and [magicui](https://magicui.dev/).
+```bash
+npx shadcn@latest add <component-name>
+```
+
+For example, install the button component:
+
+```bash
+npx shadcn@latest add button
+```
+
+## 📖 Documentation
+
+Visit [annui.org](https://annui.org) for complete documentation.
+
+## 💖 Credits
+
+AnnUI is heavily inspired by these excellent projects:
+
+- [shadcn/ui](https://ui.shadcn.com)
+- [Radix UI](https://www.radix-ui.com)
+- [MagicUI](https://magicui.design)
+
+## 📄 License
+
+MIT © [AnnUI](LICENSE)

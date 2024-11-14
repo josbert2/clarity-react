@@ -26,3 +26,9 @@ yarn-error.log*
 .env*.local
 .vercel
 next-env.d.ts
+
+# IDE - IntelliJ IDEA
+.idea
+*.iml
+*.iws
+*.ipr
