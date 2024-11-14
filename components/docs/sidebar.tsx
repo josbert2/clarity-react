@@ -307,7 +307,7 @@ export function SidebarFolderLink(props: LinkProps) {
 
 export function SidebarFolderContent(props: CollapsibleContentProps) {
   return (
-    <CollapsibleContent {...props}>
+    <CollapsibleContent forceMount {...props}>
       <SidebarMenuSub>{props.children}</SidebarMenuSub>
     </CollapsibleContent>
   )
