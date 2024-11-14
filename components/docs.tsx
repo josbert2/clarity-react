@@ -123,7 +123,7 @@ export function DocsLayout({
             </BreadcrumbList>
           </Breadcrumb>
         </header>
-        <div className="flex flex-1 gap-4 [&_article]:gap-2 [&_article]:pt-6 [&_article]:md:pt-6 [&_.-mb-3]:-mb-1">
+        <div className="flex flex-1 gap-4 [&_article]:gap-2 [&_article]:pt-6 [&_article]:md:pt-6 [&_.-mb-3]:-mb-1 md:[--fd-sidebar-width:0px] xl:[--fd-toc-width:260px]">
           {props.children}
         </div>
       </SidebarInset>
