@@ -77,7 +77,7 @@ const TabsTrigger = React.forwardRef<
       )}
       {activeTab === props.value && (
         <motion.span
-          className="block absolute h-[2px] w-full bg-primary left-0 bottom-0.5"
+          className="block absolute h-[2px] w-full bg-primary left-0 bottom-1"
           layoutId="vercel-tabs-active"
           transition={{ duration: 0.15 }}
         />
