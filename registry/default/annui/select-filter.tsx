@@ -33,18 +33,8 @@ const SelectFilter = React.forwardRef<
     <SelectFilterProvider
       value={{ value, onChange: setValue, items, setItems }}
     >
-      <div
-        ref={ref}
-        className={cn(
-          "grid transition-all duration-300 ease-in-out",
-          "grid-rows-[1fr] grid-template-rows-[0fr]",
-          className
-        )}
-        {...props}
-      >
-        <div className="">
-          <div className="flex flex-col gap-2 relative">{children}</div>
-        </div>
+      <div ref={ref} className="flex flex-col gap-2 relative">
+        {children}
       </div>
     </SelectFilterProvider>
   )
