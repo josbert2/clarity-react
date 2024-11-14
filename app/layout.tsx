@@ -62,7 +62,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       className={cn(fontSans.variable, fontMono.variable)}
       suppressHydrationWarning
     >
-      <body className="flex flex-col min-h-screen font-sans antialiased">
+      <body className="flex flex-col min-h-svh font-sans antialiased">
         <RootProvider>{children}</RootProvider>
         <Toaster />
       </body>
