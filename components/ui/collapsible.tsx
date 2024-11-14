@@ -62,6 +62,7 @@ const CollapsibleContent = ({
 
   return (
     <CollapsiblePrimitive.CollapsibleContent
+      forceMount
       className={cn("overflow-hidden", className)}
       style={{ height: initialHeight }}
       ref={scope}
