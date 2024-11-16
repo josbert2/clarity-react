@@ -177,4 +177,15 @@ export const examples: Registry = [
       },
     ],
   },
+  {
+    name: "tabs-00-underline",
+    type: "registry:example",
+    registryDependencies: ["tabs-00"],
+    files: [
+      {
+        path: "example/tabs-00-underline.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
 ]

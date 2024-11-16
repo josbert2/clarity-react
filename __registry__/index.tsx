@@ -373,6 +373,22 @@ export const Index: Record<string, any> = {
       subcategory: "",
       chunks: []
     },
+    "tabs-00-underline": {
+      name: "tabs-00-underline",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["tabs-00"],
+      files: [{
+        path: "registry/default/example/tabs-00-underline.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/example/tabs-00-underline.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
     "utils": {
       name: "utils",
       description: "",

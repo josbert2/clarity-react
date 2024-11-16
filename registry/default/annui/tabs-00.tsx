@@ -53,8 +53,10 @@ TabsList.displayName = "TabsList00"
 
 const TabsTrigger = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.Trigger>,
-  React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>
->(({ className, children, ...props }, ref) => {
+  React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger> & {
+    hoverAnimation?: boolean
+  }
+>(({ className, children, hoverAnimation = true, ...props }, ref) => {
   const { hoverTab, activeTab, setHoverTab } = useTabsContext()
 
   const variants = {
@@ -73,7 +75,7 @@ const TabsTrigger = React.forwardRef<
       <AnimatePresence initial={false}>
         {activeTab === props.value && (
           <motion.span
-            className="block absolute h-1 rounded-full w-full bg-primary left-0 bottom-0"
+            className="block absolute h-1 rounded-full w-full bg-primary left-0 bottom-0 z-10"
             variants={variants}
             initial="default"
             animate="active"
@@ -84,7 +86,13 @@ const TabsTrigger = React.forwardRef<
       </AnimatePresence>
       <motion.div
         className="font-medium text-sm gap-2 inline-flex items-center h-9"
-        animate={hoverTab === props.value ? { y: -1 } : { y: 0 }}
+        animate={
+          hoverAnimation
+            ? hoverTab === props.value
+              ? { y: -1 }
+              : { y: 0 }
+            : { y: 0 }
+        }
         transition={{ duration: 0.2 }}
       >
         {children}
