@@ -117,6 +117,22 @@ export const Index: Record<string, any> = {
       subcategory: "",
       chunks: []
     },
+    "tabs-01": {
+      name: "tabs-01",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/annui/tabs-01.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/annui/tabs-01.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
     "focus-tabs-demo": {
       name: "focus-tabs-demo",
       description: "",
@@ -384,6 +400,38 @@ export const Index: Record<string, any> = {
         target: ""
       }],
       component: React.lazy(() => import("@/registry/default/example/tabs-00-underline.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "tabs-00-hover-underline": {
+      name: "tabs-00-hover-underline",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["tabs-00"],
+      files: [{
+        path: "registry/default/example/tabs-00-hover-underline.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/example/tabs-00-hover-underline.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "tabs-01-demo": {
+      name: "tabs-01-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["tabs-01"],
+      files: [{
+        path: "registry/default/example/tabs-01-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/example/tabs-01-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",

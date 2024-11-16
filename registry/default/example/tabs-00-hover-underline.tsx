@@ -2,7 +2,7 @@
 
 import { Tabs, TabsList, TabsTrigger } from "@/registry/default/annui/tabs-00"
 
-export default function Tabs00Underline() {
+export default function Tabs00HoverUnderline() {
   return (
     <Tabs defaultValue="account">
       <TabsList>
@@ -31,14 +31,14 @@ const TabsTriggerDemo = ({
 }) => {
   return (
     <TabsTrigger hoverAnimation={false} className={className} value={value}>
-      <TabsTriggerUnderline />
+      <TabsTriggerHoverUnderline />
       {children}
     </TabsTrigger>
   )
 }
 
-const TabsTriggerUnderline = () => {
+const TabsTriggerHoverUnderline = () => {
   return (
-    <span className="inline-block absolute h-1 rounded-full w-full bg-secondary left-0 bottom-0" />
+    <span className="hidden group-hover/tabs-trigger:inline-block absolute h-1 rounded-full w-full bg-secondary left-0 bottom-0" />
   )
 }

@@ -67,7 +67,7 @@ const TabsTrigger = React.forwardRef<
   return (
     <TabsPrimitive.Trigger
       ref={ref}
-      className={cn("relative", className)}
+      className={cn("relative group/tabs-trigger", className)}
       onMouseEnter={() => setHoverTab(props.value)}
       onMouseLeave={() => setHoverTab(undefined)}
       {...props}
@@ -75,7 +75,7 @@ const TabsTrigger = React.forwardRef<
       <AnimatePresence initial={false}>
         {activeTab === props.value && (
           <motion.span
-            className="block absolute h-1 rounded-full w-full bg-primary left-0 bottom-0 z-10"
+            className="inline-block absolute h-1 rounded-full w-full bg-primary left-0 bottom-0 z-10"
             variants={variants}
             initial="default"
             animate="active"

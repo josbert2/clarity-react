@@ -95,4 +95,15 @@ export const ui: Registry = [
       },
     ],
   },
+  {
+    name: "tabs-01",
+    type: "registry:ui",
+    dependencies: ["@radix-ui/react-tabs"],
+    files: [
+      {
+        path: "annui/tabs-01.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
 ]

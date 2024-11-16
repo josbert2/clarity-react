@@ -188,4 +188,26 @@ export const examples: Registry = [
       },
     ],
   },
+  {
+    name: "tabs-00-hover-underline",
+    type: "registry:example",
+    registryDependencies: ["tabs-00"],
+    files: [
+      {
+        path: "example/tabs-00-hover-underline.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "tabs-01-demo",
+    type: "registry:example",
+    registryDependencies: ["tabs-01"],
+    files: [
+      {
+        path: "example/tabs-01-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
 ]
