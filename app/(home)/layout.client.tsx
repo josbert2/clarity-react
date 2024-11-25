@@ -129,7 +129,7 @@ const Footer = () => {
         y: 0,
       }}
       transition={{ duration: 0.5 }}
-      className="bg-background/80 backdrop-blur-sm"
+      className="bg-background/80 backdrop-blur-sm border-t border-border/60"
     >
       <motion.div
         className="container flex items-center justify-between h-16 px-4"

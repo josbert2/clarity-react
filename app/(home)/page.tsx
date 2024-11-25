@@ -1,57 +1,102 @@
 import Link from "next/link"
+import { motion } from "motion/react"
 
 import { Button } from "@/components/ui/button"
 
-import { BecomeSponsor, Feature } from "./page.client"
+import {
+  BecomeSponsor,
+  DashedCircle,
+  DashedLineContainer,
+  Feature,
+  GetStarted,
+  Github,
+  HorizontalDashedLine,
+  VerticalDashedLine,
+} from "./page.client"
 
 export default function HomePage() {
   return (
-    <div className="container mx-auto px-4 py-24 sm:py-32">
-      <div className="flex flex-col items-center text-center space-y-8">
-        <div className="relative">
-          <div className="absolute -inset-1.5 rounded-lg bg-gradient-to-r from-gray-400 via-gray-500 to-gray-700 opacity-50 blur-xl" />
-          <h1 className="relative text-5xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-500 via-gray-600 to-gray-700">
+    <div className="container mx-auto px-4 py-12">
+      <div className="flex flex-col items-center text-center py-32">
+        <DashedLineContainer>
+          <VerticalDashedLine className="-left-12" width="calc(100% + 112px)" />
+          <h1 className="relative text-5xl sm:text-7xl font-bold py-5">
             AnnUI
           </h1>
-        </div>
+          <VerticalDashedLine />
 
-        <p className="max-w-2xl text-xl text-gray-600 dark:text-gray-400">
-          AnnUI is a collection of re-usable components that you can copy and
-          paste into your web apps.
-        </p>
+          <div className="py-10 flex flex-col items-center">
+            <p className="max-w-2xl text-xl text-muted-foreground">
+              <span className="text-primary font-medium">AnnUI</span> is a
+              collection of{" "}
+              <span className="text-primary font-medium">
+                reusable components
+              </span>{" "}
+              that you can{" "}
+              <span className="text-primary font-medium">copy and paste</span>{" "}
+              into your web apps.
+            </p>
+          </div>
+          <VerticalDashedLine />
 
-        <div className="flex gap-4">
-          <Button size="lg" asChild>
-            <Link href="/docs">Get Started</Link>
-          </Button>
-          <Button size="lg" variant="outline" asChild>
-            <Link href="https://github.com/annui-org/annui">GitHub</Link>
-          </Button>
-        </div>
+          <div className="flex items-center justify-center">
+            <div className="flex flex-col items-center justify-center gap-4 relative py-10 px-8">
+              <div className="flex gap-4">
+                <GetStarted />
+                <Github />
+              </div>
 
-        <div className="flex flex-wrap justify-center gap-4 mt-8">
-          <div className="flex items-center gap-2 text-sm text-gray-500">
-            <span className="text-green-500">✓</span>
-            Open Source
+              <div className="flex flex-wrap justify-center gap-4">
+                <div className="flex items-center gap-2 text-sm text-gray-500">
+                  <span className="text-green-500">✓</span>
+                  Open Source
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-500">
+                  <span className="text-green-500">✓</span>
+                  MIT License
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-500">
+                  <span className="text-green-500">✓</span>
+                  Customizable
+                </div>
+              </div>
+
+              <HorizontalDashedLine
+                className="hidden md:block"
+                height="calc(100% + 56px)"
+                side="left"
+              />
+              <HorizontalDashedLine
+                className="hidden md:block"
+                height="calc(100% + 56px)"
+                side="right"
+              />
+            </div>
           </div>
-          <div className="flex items-center gap-2 text-sm text-gray-500">
-            <span className="text-green-500">✓</span>
-            MIT License
-          </div>
-          <div className="flex items-center gap-2 text-sm text-gray-500">
-            <span className="text-green-500">✓</span>
-            Customizable
-          </div>
-        </div>
+
+          <VerticalDashedLine />
+
+          <HorizontalDashedLine
+            className="-top-14"
+            height="calc(100% + 112px)"
+            side="left"
+          />
+          <HorizontalDashedLine
+            className="-top-14"
+            height="calc(100% + 112px)"
+            side="right"
+          />
+          <DashedCircle className="-top-12 -left-12" />
+        </DashedLineContainer>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-32">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-r border-dashed border-primary/20 mt-20">
         {features.map((feature) => (
           <Feature key={feature.title} {...feature} />
         ))}
       </div>
 
-      <div className="mt-32">
+      <div className="border-t border-dashed border-primary/20">
         <BecomeSponsor />
       </div>
     </div>
