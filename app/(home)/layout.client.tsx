@@ -1,13 +1,29 @@
 "use client"
 
-import { useState } from "react"
+import { ButtonHTMLAttributes, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { cva } from "class-variance-authority"
+import { Moon, Sun } from "lucide-react"
 import { motion, useMotionValueEvent, useScroll } from "motion/react"
+import { useTheme } from "next-themes"
 
 import { cn } from "@/lib/utils"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { Icons } from "@/components/ui/icon"
+
+const buttonVariants = cva(
+  "size-6 rounded-full p-[5px] text-muted-foreground",
+  {
+    variants: {
+      dark: {
+        true: "dark:bg-accent dark:text-accent-foreground",
+        false:
+          "bg-accent text-accent-foreground dark:bg-transparent dark:text-muted-foreground",
+      },
+    },
+  }
+)
 
 const Header = () => {
   const { scrollY } = useScroll()
@@ -66,6 +82,7 @@ const Header = () => {
           </Link>
         </div>
         <div className="flex items-center gap-2">
+          <ThemeToggle />
           <Link href="https://github.com/annui-org/annui">
             <Item icon>
               <Icons.Github />
@@ -79,6 +96,34 @@ const Header = () => {
         </div>
       </motion.div>
     </motion.header>
+  )
+}
+
+const ThemeToggle = ({
+  className,
+  ...props
+}: ButtonHTMLAttributes<HTMLButtonElement>): React.ReactElement => {
+  const { setTheme, resolvedTheme } = useTheme()
+
+  const onToggle = () => {
+    setTheme(resolvedTheme === "dark" ? "light" : "dark")
+  }
+
+  return (
+    <button
+      type="button"
+      className={cn(
+        "inline-flex items-center rounded-full border p-[2px]",
+        className
+      )}
+      data-theme-toggle=""
+      aria-label="Toggle Theme"
+      onClick={onToggle}
+      {...props}
+    >
+      <Sun className={cn(buttonVariants({ dark: false }))} />
+      <Moon className={cn(buttonVariants({ dark: true }))} />
+    </button>
   )
 }
 
