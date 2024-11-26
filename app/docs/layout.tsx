@@ -3,7 +3,7 @@ import { Book, Pen } from "lucide-react"
 
 import { source } from "@/lib/source"
 import { SidebarProvider } from "@/components/ui/sidebar"
-import { DocsLayout } from "@/components/docs"
+import { DocsLayout } from "@/components/notebook"
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
