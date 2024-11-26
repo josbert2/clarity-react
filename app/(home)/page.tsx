@@ -14,13 +14,17 @@ export default function HomePage() {
     <div className="container mx-auto px-4 py-12">
       <div className="flex flex-col items-center text-center py-32">
         <DashedLineContainer>
-          <VerticalDashedLine className="-left-12" width="calc(100% + 112px)" />
+          <VerticalDashedLine
+            className="md:-left-10"
+            width="calc(100% + 80px)"
+            mobileWidth="100%"
+          />
           <h1 className="relative text-5xl sm:text-7xl font-bold py-5">
             AnnUI
           </h1>
           <VerticalDashedLine />
 
-          <div className="py-10 flex flex-col items-center">
+          <div className="py-10 flex flex-col items-center px-4">
             <p className="max-w-2xl text-xl text-muted-foreground">
               <span className="text-primary font-medium">AnnUI</span> is a
               collection of{" "}
@@ -36,7 +40,7 @@ export default function HomePage() {
 
           <div className="flex items-center justify-center">
             <div className="flex flex-col items-center justify-center gap-4 relative py-10 px-8">
-              <div className="flex gap-4">
+              <div className="flex flex-wrap justify-center gap-4">
                 <GetStarted />
                 <Github />
               </div>

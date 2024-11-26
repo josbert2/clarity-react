@@ -4,6 +4,7 @@ import Link from "next/link"
 import { motion, useAnimation } from "motion/react"
 
 import { cn } from "@/lib/cn"
+import { useIsMobile } from "@/hooks/use-mobile"
 
 const DashedLineContainer = ({ children }: { children: React.ReactNode }) => {
   const container = {
@@ -31,13 +32,20 @@ const DashedLineContainer = ({ children }: { children: React.ReactNode }) => {
 const VerticalDashedLine = ({
   className,
   width = "100%",
+  mobileWidth = "100%",
 }: {
   className?: string
   width?: string
+  mobileWidth?: string
 }) => {
+  const isMobile = useIsMobile()
   const variants = {
     initial: { width: "0%", opacity: 0.6 },
-    visible: { width, opacity: 0.2, transition: { duration: 1 } },
+    visible: {
+      width: isMobile ? mobileWidth : width,
+      opacity: 0.2,
+      transition: { duration: 1 },
+    },
   }
 
   return (
@@ -157,7 +165,7 @@ const Feature = ({
 const BecomeSponsor = () => {
   return (
     <motion.div
-      className="bg-background/50 backdrop-blur-sm border-x border-b border-dashed border-primary/20 relative overflow-hidden group py-20"
+      className="bg-background/50 backdrop-blur-sm border-x border-b border-dashed border-primary/20 relative overflow-hidden group py-20 px-4"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -227,7 +235,7 @@ const GetStarted = () => {
     <Link href="/docs">
       <motion.button
         whileTap={{ scale: 0.95 }}
-        className="px-4 py-2 relative overflow-hidden"
+        className="px-4 py-2 relative overflow-hidden h-10"
         onHoverStart={() => {
           controls.start("animate")
         }}
@@ -237,7 +245,7 @@ const GetStarted = () => {
       >
         <motion.div className="absolute inset-0 bg-primary text-primary-foreground rounded-lg" />
         <motion.span
-          className="relative z-[2]"
+          className="relative z-[2] text-nowrap"
           variants={textVariants}
           animate={controls}
           initial="initial"
@@ -250,7 +258,7 @@ const GetStarted = () => {
           animate={controls}
           variants={variants}
           transition={{ duration: 0.3 }}
-          className="dark bg-primary absolute inset-0 z-[1] rounded-md"
+          className="bg-accent absolute inset-0 z-[1] rounded-md"
         />
       </motion.button>
     </Link>
@@ -262,7 +270,7 @@ const Github = () => {
     <Link href="https://github.com/annui-org/annui" target="_blank">
       <motion.button
         whileTap={{ scale: 0.95 }}
-        className="px-8 py-2 relative overflow-hidden border border-input rounded-lg"
+        className="px-8 py-2 relative overflow-hidden border border-input rounded-lg h-10"
       >
         Github
       </motion.button>
