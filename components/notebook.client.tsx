@@ -128,7 +128,7 @@ export function DocsNavbar() {
   const isMobile = useIsMobile()
 
   return (
-    <Navbar id="nd-subnav" className="h-14 md:gap-1.5">
+    <Navbar id="nd-subnav" className="h-14 md:gap-1.5 z-[2]">
       {!open && <SidebarTrigger className="-ms-1.5 size-8" />}
       <SearchOnly>
         <LargeSearchToggle className="w-full max-w-[240px] rounded-lg max-md:hidden" />

@@ -85,7 +85,7 @@ export function DocsLayout({
         <SidebarInset>
           <div className="w-full min-w-0 max-w-[var(--fd-content-width)] [--fd-nav-height:3.5rem]">
             <DocsNavbar />
-            <div className="flex flex-row">{children}</div>
+            <div className="flex flex-row z-[1]">{children}</div>
           </div>
           <div
             className="min-w-[var(--fd-sidebar-width)] flex-1"

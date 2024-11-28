@@ -106,4 +106,15 @@ export const ui: Registry = [
       },
     ],
   },
+  {
+    name: "image-carousel",
+    type: "registry:ui",
+    dependencies: ["motion", "react-use-controllable-state"],
+    files: [
+      {
+        path: "annui/image-carousel.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
 ]

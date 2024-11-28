@@ -133,6 +133,22 @@ export const Index: Record<string, any> = {
       subcategory: "",
       chunks: []
     },
+    "image-carousel": {
+      name: "image-carousel",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/annui/image-carousel.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/annui/image-carousel.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
     "focus-tabs-demo": {
       name: "focus-tabs-demo",
       description: "",
@@ -432,6 +448,38 @@ export const Index: Record<string, any> = {
         target: ""
       }],
       component: React.lazy(() => import("@/registry/default/example/tabs-01-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "image-carousel-demo": {
+      name: "image-carousel-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["image-carousel"],
+      files: [{
+        path: "registry/default/example/image-carousel-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/example/image-carousel-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "image-carousel-collapsible": {
+      name: "image-carousel-collapsible",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["image-carousel"],
+      files: [{
+        path: "registry/default/example/image-carousel-collapsible.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/example/image-carousel-collapsible.tsx")),
       source: "",
       category: "",
       subcategory: "",

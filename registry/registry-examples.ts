@@ -210,4 +210,26 @@ export const examples: Registry = [
       },
     ],
   },
+  {
+    name: "image-carousel-demo",
+    type: "registry:example",
+    registryDependencies: ["image-carousel"],
+    files: [
+      {
+        path: "example/image-carousel-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "image-carousel-collapsible",
+    type: "registry:example",
+    registryDependencies: ["image-carousel"],
+    files: [
+      {
+        path: "example/image-carousel-collapsible.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
 ]
