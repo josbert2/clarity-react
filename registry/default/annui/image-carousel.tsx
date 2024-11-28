@@ -70,7 +70,7 @@ const ImageCarouselItem = React.forwardRef<
           ref={ref}
           data-active={isActive}
           className={cn(
-            "cursor-pointer relative rounded-xl overflow-hidden p-2 h-full data-[active=true]:ring-2 data-[active=true]:ring-primary/80 data-[active=true]:ring-offset-2 data-[active=true]:ring-offset-background",
+            "cursor-pointer relative rounded-xl overflow-hidden p-2 h-full transition-shadow duration-300 data-[active=true]:ring-2 data-[active=true]:ring-primary/80 data-[active=true]:ring-offset-2 data-[active=true]:ring-offset-background",
             className
           )}
           variants={variants}
