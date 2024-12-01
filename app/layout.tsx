@@ -39,20 +39,20 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://annui.org",
+    url: "https://www.annui.org",
     title: "AnnUI - Modern React Component Library",
     description:
-      "AnnUI is a collection of re-usable components that you can copy and paste into your web apps.",
+      "AnnUI is a collection of reusable components that you can copy and paste into your web apps.",
     siteName: "AnnUI",
   },
   twitter: {
     card: "summary_large_image",
     title: "AnnUI - Modern React Component Library",
     description:
-      "AnnUI is a collection of re-usable components that you can copy and paste into your web apps.",
+      "AnnUI is a collection of reusable components that you can copy and paste into your web apps.",
     creator: "@liorael",
   },
-  metadataBase: new URL("https://annui.org"),
+  metadataBase: new URL("https://www.annui.org"),
 }
 
 export default function Layout({ children }: { children: ReactNode }) {
