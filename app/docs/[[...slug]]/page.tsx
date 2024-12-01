@@ -1,3 +1,4 @@
+import { Metadata } from "next"
 import { notFound } from "next/navigation"
 import defaultMdxComponents from "fumadocs-ui/mdx"
 import {
@@ -43,14 +44,19 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata(props: {
-  params: Promise<{ slug?: string[] }>
-}) {
+  params: Promise<{ slug: string[] }>
+}): Promise<Metadata> {
   const params = await props.params
   const page = source.getPage(params.slug)
+
   if (!page) notFound()
+
+  const description =
+    page.data.description ??
+    "AnnUI is a collection of reusable components that you can copy and paste into your web apps."
 
   return {
     title: page.data.title,
-    description: page.data.description,
+    description,
   }
 }
