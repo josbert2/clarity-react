@@ -88,7 +88,7 @@ const Header = () => {
               <Icons.Github />
             </Item>
           </Link>
-          <Link href="https://discord.gg/EnzWx4Ck">
+          <Link href="https://discord.gg/Sy48hVDD">
             <Item icon>
               <Icons.Discord />
             </Item>
