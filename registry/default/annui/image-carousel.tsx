@@ -41,6 +41,7 @@ const ImageCarouselItem = React.forwardRef<
   HTMLDivElement,
   React.ComponentPropsWithoutRef<typeof motion.div> & {
     value: string
+    children: React.ReactNode
   }
 >(({ children, value, className, ...props }, ref) => {
   const { activeValue, setActiveValue, collapsible } = useImageCarouselContext()
@@ -149,7 +150,7 @@ ImageCarouselItemTitle.displayName = "ImageCarouselItemTitle"
 
 const ImageCarouselItemDescription = React.forwardRef<
   HTMLDivElement,
-  React.ComponentPropsWithoutRef<"div">
+  React.ComponentPropsWithoutRef<typeof motion.div>
 >(({ className, ...props }, ref) => {
   const { isActive } = useImageCarouselItemContext()
 

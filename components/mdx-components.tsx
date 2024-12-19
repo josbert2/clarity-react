@@ -39,8 +39,8 @@ const components = {
       {children}
     </Tabs>
   ),
-  Tab: (props: React.ComponentProps<typeof FumadocsTab>) => (
-    <TabsContent {...props} />
+  Tab: ({ value, ...props }: React.ComponentProps<typeof FumadocsTab>) => (
+    <TabsContent value={value!} {...props} />
   ),
   Steps,
   Step,
