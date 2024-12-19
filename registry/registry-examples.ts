@@ -232,4 +232,70 @@ export const examples: Registry = [
       },
     ],
   },
+  {
+    name: "detail-panel-demo",
+    type: "registry:example",
+    registryDependencies: ["detail-panel", "colored-label"],
+    files: [
+      {
+        path: "example/detail-panel-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "detail-panel-sheet",
+    type: "registry:example",
+    registryDependencies: ["detail-panel", "sheet"],
+    files: [
+      {
+        path: "example/detail-panel-sheet.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "colored-label-demo",
+    type: "registry:example",
+    registryDependencies: ["colored-label"],
+    files: [
+      {
+        path: "example/colored-label-demo.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "colored-label-colors",
+    type: "registry:example",
+    registryDependencies: ["colored-label"],
+    files: [
+      {
+        path: "example/colored-label-colors.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "colored-label-opacity",
+    type: "registry:example",
+    registryDependencies: ["colored-label"],
+    files: [
+      {
+        path: "example/colored-label-opacity.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
+  {
+    name: "colored-label-dark",
+    type: "registry:example",
+    registryDependencies: ["colored-label"],
+    files: [
+      {
+        path: "example/colored-label-dark.tsx",
+        type: "registry:example",
+      },
+    ],
+  },
 ]

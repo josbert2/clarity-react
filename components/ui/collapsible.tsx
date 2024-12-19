@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils"
 import { createContext } from "@/registry/default/lib/context"
 
 const Collapsible = React.forwardRef<
-  React.ElementRef<typeof CollapsiblePrimitive.Root>,
+  React.ComponentRef<typeof CollapsiblePrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof CollapsiblePrimitive.Root>
 >(({ children, open: openProp, onOpenChange, defaultOpen, ...props }, ref) => {
   const [open, setOpen] = useControllableState({

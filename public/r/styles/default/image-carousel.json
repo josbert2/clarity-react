@@ -3,7 +3,7 @@
   "type": "registry:ui",
   "dependencies": [
     "motion",
-    "react-use-controllable-state"
+    "@radix-ui/react-use-controllable-state"
   ],
   "files": [
     {

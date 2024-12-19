@@ -13,7 +13,7 @@ const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger
 const DropdownMenuSeparator = DropdownMenuPrimitive.Separator
 
 const DropdownMenuContent = React.forwardRef<
-  React.ElementRef<typeof DropdownMenuPrimitive.Content>,
+  React.ComponentRef<typeof DropdownMenuPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Content>
 >(({ className, children, sideOffset = 4, ...props }, ref) => (
   <DropdownMenuPrimitive.Portal>
@@ -35,7 +35,7 @@ const DropdownMenuContent = React.forwardRef<
 DropdownMenuContent.displayName = DropdownMenuPrimitive.Content.displayName
 
 const DropdownMenuItem = React.forwardRef<
-  React.ElementRef<typeof DropdownMenuPrimitive.Item>,
+  React.ComponentRef<typeof DropdownMenuPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {
     inset?: boolean
   }
@@ -59,7 +59,7 @@ const DropdownMenuItem = React.forwardRef<
 DropdownMenuItem.displayName = DropdownMenuPrimitive.Item.displayName
 
 const DropdownMenuItemIcon = React.forwardRef<
-  React.ElementRef<"span">,
+  React.ComponentRef<"span">,
   React.ComponentPropsWithoutRef<"span">
 >(({ className, children, ...props }, ref) => (
   <span
@@ -76,7 +76,7 @@ const DropdownMenuItemIcon = React.forwardRef<
 DropdownMenuItemIcon.displayName = "DropdownMenuItemIcon"
 
 const DropdownMenuItemTitle = React.forwardRef<
-  React.ElementRef<"h3">,
+  React.ComponentRef<"h3">,
   React.ComponentPropsWithoutRef<"h3">
 >(({ className, children, ...props }, ref) => (
   <h3
@@ -93,7 +93,7 @@ const DropdownMenuItemTitle = React.forwardRef<
 DropdownMenuItemTitle.displayName = "DropdownMenuItemTitle"
 
 const DropdownMenuItemDescription = React.forwardRef<
-  React.ElementRef<"p">,
+  React.ComponentRef<"p">,
   React.ComponentPropsWithoutRef<"p">
 >(({ className, children, ...props }, ref) => (
   <p
