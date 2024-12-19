@@ -73,6 +73,7 @@ export const ui: Registry = [
       "motion",
       "colord",
     ],
+    registryDependencies: ["colored-label"],
     files: [
       {
         path: "annui/select-filter.tsx",
@@ -109,10 +110,32 @@ export const ui: Registry = [
   {
     name: "image-carousel",
     type: "registry:ui",
-    dependencies: ["motion", "react-use-controllable-state"],
+    dependencies: ["motion", "@radix-ui/react-use-controllable-state"],
     files: [
       {
         path: "annui/image-carousel.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "detail-panel",
+    type: "registry:ui",
+    dependencies: ["motion", "@radix-ui/react-slot"],
+    files: [
+      {
+        path: "annui/detail-panel.tsx",
+        type: "registry:ui",
+      },
+    ],
+  },
+  {
+    name: "colored-label",
+    type: "registry:ui",
+    dependencies: ["colord", "@radix-ui/react-slot"],
+    files: [
+      {
+        path: "annui/colored-label.tsx",
         type: "registry:ui",
       },
     ],

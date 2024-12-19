@@ -89,7 +89,7 @@ export const Index: Record<string, any> = {
       name: "select-filter",
       description: "",
       type: "registry:ui",
-      registryDependencies: undefined,
+      registryDependencies: ["colored-label"],
       files: [{
         path: "registry/default/annui/select-filter.tsx",
         type: "registry:ui",
@@ -144,6 +144,38 @@ export const Index: Record<string, any> = {
         target: ""
       }],
       component: React.lazy(() => import("@/registry/default/annui/image-carousel.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "detail-panel": {
+      name: "detail-panel",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/annui/detail-panel.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/annui/detail-panel.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "colored-label": {
+      name: "colored-label",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/annui/colored-label.tsx",
+        type: "registry:ui",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/annui/colored-label.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -480,6 +512,102 @@ export const Index: Record<string, any> = {
         target: ""
       }],
       component: React.lazy(() => import("@/registry/default/example/image-carousel-collapsible.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "detail-panel-demo": {
+      name: "detail-panel-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["detail-panel","colored-label"],
+      files: [{
+        path: "registry/default/example/detail-panel-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/example/detail-panel-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "detail-panel-sheet": {
+      name: "detail-panel-sheet",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["detail-panel","sheet"],
+      files: [{
+        path: "registry/default/example/detail-panel-sheet.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/example/detail-panel-sheet.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "colored-label-demo": {
+      name: "colored-label-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["colored-label"],
+      files: [{
+        path: "registry/default/example/colored-label-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/example/colored-label-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "colored-label-colors": {
+      name: "colored-label-colors",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["colored-label"],
+      files: [{
+        path: "registry/default/example/colored-label-colors.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/example/colored-label-colors.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "colored-label-opacity": {
+      name: "colored-label-opacity",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["colored-label"],
+      files: [{
+        path: "registry/default/example/colored-label-opacity.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/example/colored-label-opacity.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "colored-label-dark": {
+      name: "colored-label-dark",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["colored-label"],
+      files: [{
+        path: "registry/default/example/colored-label-dark.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("@/registry/default/example/colored-label-dark.tsx")),
       source: "",
       category: "",
       subcategory: "",

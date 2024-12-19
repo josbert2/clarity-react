@@ -9,12 +9,14 @@ import { AnimatePresence, motion } from "motion/react"
 import { cn } from "@/lib/utils"
 import { createContext } from "@/registry/default/lib/context"
 
+import { ColoredLabel } from "./colored-label"
+
 const transition = {
   layout: { duration: 0.3, ease: "easeInOut" },
 }
 
 const SelectFilter = React.forwardRef<
-  React.ElementRef<"div">,
+  React.ComponentRef<"div">,
   React.ComponentPropsWithoutRef<"div"> & {
     value?: string[]
     onChange?: (value: string[]) => void
@@ -42,59 +44,78 @@ const SelectFilter = React.forwardRef<
 SelectFilter.displayName = "SelectFilter"
 
 const SelectFilterItem = React.forwardRef<
-  React.ElementRef<typeof motion.button>,
-  React.ComponentPropsWithoutRef<typeof motion.button> & {
-    color?: string
-    value: string
-    children: React.ReactNode
-  }
->(({ color, className, children, style, value, ...props }, ref) => {
-  const { value: selectedValue, onChange, setItems } = useSelectFilterContext()
-  const isSelected = selectedValue?.includes(value)
+  React.ComponentRef<typeof motion.button>,
+  React.ComponentPropsWithoutRef<typeof motion.button> &
+    React.ComponentPropsWithoutRef<typeof ColoredLabel> & {
+      value: string
+      children: React.ReactNode
+    }
+>(
+  (
+    {
+      color,
+      bgOpacity,
+      textOpacity,
+      darkBgOpacity,
+      darkTextOpacity,
+      className,
+      children,
+      style,
+      value,
+      ...props
+    },
+    ref
+  ) => {
+    const {
+      value: selectedValue,
+      onChange,
+      setItems,
+    } = useSelectFilterContext()
+    const isSelected = selectedValue?.includes(value)
 
-  React.useEffect(() => {
-    setItems((prev) => ({
-      ...prev,
-      [value]: {
-        color,
-        children,
-        props: { className },
-      },
-    }))
-  }, [color, value, className, children])
-
-  return (
-    !isSelected && (
-      <motion.button
-        ref={ref}
-        className={cn(
-          "rounded-full text-xs px-1.5 h-6 w-fit font-medium",
-          className
-        )}
-        transition={transition}
-        layout
-        layoutId={`select-filter-item-${value}`}
-        onClick={() => {
-          onChange((prev) => [...(prev ?? []), value])
-        }}
-        style={{
-          backgroundColor: color
-            ? colord(color).alpha(0.1).toRgbString()
-            : undefined,
+    React.useEffect(() => {
+      setItems((prev) => ({
+        ...prev,
+        [value]: {
           color,
-          ...style,
-        }}
-        {...props}
-      >
-        {children}
-      </motion.button>
+          children,
+          props: { className },
+        },
+      }))
+    }, [color, value, className, children])
+
+    return (
+      !isSelected && (
+        <ColoredLabel
+          color={color}
+          className={cn("rounded-full h-6", className)}
+          bgOpacity={bgOpacity}
+          textOpacity={textOpacity}
+          darkBgOpacity={darkBgOpacity}
+          darkTextOpacity={darkTextOpacity}
+          asChild
+        >
+          <motion.button
+            ref={ref}
+            transition={transition}
+            layout
+            layoutId={`select-filter-item-${value}`}
+            onClick={() => {
+              onChange((prev) => [...(prev ?? []), value])
+            }}
+            {...props}
+          >
+            {children}
+          </motion.button>
+        </ColoredLabel>
+      )
     )
-  )
-})
+  }
+)
 SelectFilterItem.displayName = "SelectFilterItem"
 
 const SelectFilterSelectedItem = React.forwardRef<
-  React.ElementRef<typeof motion.button>,
+  React.ComponentRef<typeof motion.button>,
   {
     value: string
   }

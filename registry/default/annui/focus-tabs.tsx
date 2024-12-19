@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils"
 import { createContext } from "@/registry/default/lib/context"
 
 const Tabs = React.forwardRef<
-  React.ElementRef<typeof TabsPrimitive.Root>,
+  React.ComponentRef<typeof TabsPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.Root>
 >(({ value, onValueChange, defaultValue, ...props }, ref) => {
   const [activeTab, setActiveTab] = useControllableState({
@@ -32,7 +32,7 @@ const Tabs = React.forwardRef<
 Tabs.displayName = TabsPrimitive.Root.displayName
 
 const TabsList = React.forwardRef<
-  React.ElementRef<typeof TabsPrimitive.List>,
+  React.ComponentRef<typeof TabsPrimitive.List>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>
 >(({ className, children, ...props }, ref) => (
   <TabsPrimitive.List
@@ -49,7 +49,7 @@ const TabsList = React.forwardRef<
 TabsList.displayName = TabsPrimitive.List.displayName
 
 const TabsTrigger = React.forwardRef<
-  React.ElementRef<typeof TabsPrimitive.Trigger>,
+  React.ComponentRef<typeof TabsPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>
 >(({ className, children, value, ...props }, ref) => {
   return (
@@ -71,7 +71,7 @@ const TabsTrigger = React.forwardRef<
 TabsTrigger.displayName = TabsPrimitive.Trigger.displayName
 
 const TabsTriggerIcon = React.forwardRef<
-  React.ElementRef<"span">,
+  React.ComponentRef<"span">,
   React.ComponentPropsWithoutRef<"span">
 >(({ className, ...props }, ref) => (
   <span
@@ -83,7 +83,7 @@ const TabsTriggerIcon = React.forwardRef<
 TabsTriggerIcon.displayName = TabsPrimitive.Trigger.displayName
 
 const TabsTriggerText = React.forwardRef<
-  React.ElementRef<typeof motion.div>,
+  React.ComponentRef<typeof motion.div>,
   React.ComponentPropsWithoutRef<typeof motion.div> & {
     children?: React.ReactNode
   }
@@ -123,7 +123,7 @@ const TabsTriggerText = React.forwardRef<
 TabsTriggerText.displayName = TabsPrimitive.Trigger.displayName
 
 const TabsContent = React.forwardRef<
-  React.ElementRef<typeof TabsPrimitive.Content>,
+  React.ComponentRef<typeof TabsPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content>
 >(({ className, ...props }, ref) => (
   <TabsPrimitive.Content

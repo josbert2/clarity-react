@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils"
 import { createContext } from "@/registry/default/lib/context"
 
 const Tabs = React.forwardRef<
-  React.ElementRef<typeof TabsPrimitive.Root>,
+  React.ComponentRef<typeof TabsPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.Root>
 >(({ value, onValueChange, defaultValue, ...props }, ref) => {
   const [activeTab, setActiveTab] = useControllableState({
@@ -34,7 +34,7 @@ const Tabs = React.forwardRef<
 Tabs.displayName = "Tabs00"
 
 const TabsList = React.forwardRef<
-  React.ElementRef<typeof TabsPrimitive.List>,
+  React.ComponentRef<typeof TabsPrimitive.List>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>
 >(({ children, className, ...props }, ref) => {
   return (
@@ -52,7 +52,7 @@ const TabsList = React.forwardRef<
 TabsList.displayName = "TabsList00"
 
 const TabsTrigger = React.forwardRef<
-  React.ElementRef<typeof TabsPrimitive.Trigger>,
+  React.ComponentRef<typeof TabsPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger> & {
     hoverAnimation?: boolean
   }
