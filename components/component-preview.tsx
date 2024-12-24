@@ -84,13 +84,18 @@ export function ComponentPreview({
 
   return (
     <div
-      className={cn("group relative my-4 flex flex-col space-y-2", className)}
+      className={cn("group relative my-4 flex flex-col space-y-2 bg-[#F7F7F7] rounded-[20px]", className)}
       {...props}
     >
-      <Tabs defaultValue="preview" className="relative mr-auto w-full">
+      <Tabs defaultValue="preview" className="relative mr-auto w-full p-3">
         <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <span className="font-mono text-ln-label-sm text-ln-gray-450">
+              {name}.tsx
+            </span>
+          </div>
           {!hideCode && (
-            <TabsList>
+            <TabsList className="ml-auto">
               <TabsTrigger value="preview">
                 <TabsTriggerIcon>
                   <Eye />
@@ -106,7 +111,7 @@ export function ComponentPreview({
             </TabsList>
           )}
         </div>
-        <TabsContent value="preview" className="relative rounded-lg border">
+        <TabsContent value="preview" className="relative ">
           <div
             className={cn(
               "not-prose preview flex min-h-[350px] w-full justify-center p-10",

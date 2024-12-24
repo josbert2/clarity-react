@@ -1,4 +1,4 @@
-export const colors = {
+const colors = {
   inherit: "inherit",
   current: "currentColor",
   transparent: "transparent",
@@ -1510,7 +1510,7 @@ export const colors = {
   ],
 }
 
-export const colorMapping = {
+const colorMapping = {
   light: {
     background: "white",
     foreground: "{{base}}-950",
@@ -1563,4 +1563,7 @@ export const colorMapping = {
     "chart-4": "280 65% 60%",
     "chart-5": "340 75% 55%",
   },
-} as const
+}
+
+
+export default { colorMapping, colors }

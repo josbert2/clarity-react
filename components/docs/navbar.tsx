@@ -15,7 +15,7 @@ export function Navbar(props: HTMLAttributes<HTMLElement>) {
     <header
       {...props}
       className={cn(
-        "sticky top-[var(--fd-banner-height)] flex flex-row items-center border-b border-fd-foreground/10 px-4 transition-colors",
+        "sticky top-[var(--fd-banner-height)] flex flex-row items-center rounded-t-[28px] border-b border-fd-foreground/10 px-4 transition-colors",
         open && "bg-fd-background/80 backdrop-blur-lg",
         props.className
       )}

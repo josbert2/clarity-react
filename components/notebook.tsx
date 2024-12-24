@@ -83,7 +83,8 @@ export function DocsLayout({
           </SidebarContent>
         </Sidebar>
         <SidebarInset>
-          <div className="w-full min-w-0 max-w-[var(--fd-content-width)] [--fd-nav-height:3.5rem]">
+          <div className="w-full min-w-0 max-w-[var(--fd-content-width)] [--fd-nav-height:3.5rem] bg-background rounded-[28px]
+box-shadow-card">
             <DocsNavbar />
             <div className="flex flex-row z-[1]">{children}</div>
           </div>

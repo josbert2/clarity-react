@@ -1,4 +1,4 @@
-export const baseColors = [
+const baseColors = [
   {
     name: "zinc",
     label: "Zinc",
@@ -116,7 +116,7 @@ export const baseColors = [
         "destructive-foreground": "210 40% 98%",
         border: "217.2 32.6% 17.5%",
         input: "217.2 32.6% 17.5%",
-        ring: "212.7 26.8% 83.9",
+        ring: "212.7 26.8% 83.9%",
         "chart-1": "220 70% 50%",
         "chart-2": "160 60% 45%",
         "chart-3": "30 80% 55%",
@@ -751,6 +751,8 @@ export const baseColors = [
       },
     },
   },
-] as const
+]
 
-export type BaseColor = (typeof baseColors)[number]
+
+
+export default { baseColors }
