@@ -2,5 +2,9 @@
   {
     "name": "default",
     "label": "Default"
+  },
+  {
+    "name": "gourmet",
+    "label": "Gourmet"
   }
 ]

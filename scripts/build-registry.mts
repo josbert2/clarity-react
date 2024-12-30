@@ -9,9 +9,8 @@ import { Project, ScriptKind, SyntaxKind } from "ts-morph"
 import { z } from "zod"
 
 import { registry } from "../registry"
-import baseColors from "../registry/registry-base-colors"
-import colorMapping  from "../registry/registry-colors"
-import colors  from "../registry/registry-colors"
+import { baseColors } from "../registry/registry-base-colors"
+import { colorMapping, colors } from "../registry/registry-colors"
 import { styles } from "../registry/registry-styles"
 import {
   Registry,
